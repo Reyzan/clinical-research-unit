@@ -1,0 +1,351 @@
+@extends('layouts.frontend')
+
+@section('title', 'Services')
+
+@section('content')
+<x-frontend.page-title
+    title="Services"
+    :breadcrumbs="[['title' => 'Services']]"
+/>
+
+<div class="page-content">  
+
+			<!-- Services Start --> 
+			<section class="section-md">
+				<div class="container">
+					<div class="row pbmit-element-posts-wrapper">
+						<div class="col-md-6 col-lg-4">
+							<article class="pbmit-service-style-1">
+								<div class="pbminfotech-post-item">
+									<div class="pbmit-box-content-wrap">
+										<div class="pbmit-featured-img-wrapper">
+											<div class="pbmit-featured-wrapper">
+												<img src="{{ asset(\'frontend/images/service/service-img-01.jpg\') }}" class="img-fluid" alt="">
+											</div>
+										</div>
+										<a class="pbmit-link" href="{{ route('services.show', 'service-slug') }}" title="Go to Cataract Surgery"></a>
+										<div class="pbmit-heading-box">
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Cataract Surgery</a>
+											</h3>
+										</div>
+										<div class="pbmit-content-box">
+											<div class="pbmit-service-number">01</div>
+											<div class="pbmit-service-icon">
+												<svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+													<g>
+														<g>
+															<circle cx="256" cy="256.073" r="15"/>
+															<path d="m347.826 186.923c14.54 19.259 23.174 43.214 23.174 69.15 0 25.956-8.648 49.928-23.208 69.196 58.294-19.518 104.372-52.213 125.828-69.202-11.781-9.346-30.958-23.422-55.373-37.363-18.901-10.794-42.984-22.615-70.421-31.781z"/>
+															<path d="m38.379 256.08c11.78 9.345 30.956 23.42 55.374 37.363 18.901 10.793 42.985 22.614 70.421 31.78-14.54-19.259-23.174-43.214-23.174-69.15 0-25.956 8.648-49.928 23.208-69.196-58.293 19.518-104.371 52.213-125.829 69.203z"/>
+															<path d="m256 171.073c-46.869 0-85 38.131-85 85s38.131 85 85 85 85-38.131 85-85-38.131-85-85-85zm0 130c-24.813 0-45-20.187-45-45s20.187-45 45-45 45 20.187 45 45-20.187 45-45 45z"/>
+														</g>
+														<g>
+															<path d="m507.196 267.075c-1.152 1.068-28.741 26.455-73.324 52.012-41.372 23.716-105.815 51.986-177.872 51.986-39.772 0-102.916-9.02-177.872-51.986-44.583-25.557-72.172-50.944-73.324-52.012-3.063-2.839-4.804-6.826-4.804-11.002 0 11.265 3.93 22.165 11.107 30.848 13.02 15.752 32.861 37.865 57.994 60.134 27.214 24.112 55.014 43.375 82.628 57.252 35.242 17.713 70.324 26.693 104.271 26.693s69.029-8.98 104.272-26.693c27.614-13.877 55.413-33.14 82.628-57.252 25.133-22.269 44.974-44.382 57.994-60.134 7.176-8.683 11.106-19.583 11.106-30.848 0 4.176-1.741 8.163-4.804 11.002z"/>
+															<path d="m500.893 225.079c-13.02-15.752-32.861-37.865-57.994-60.134-27.214-24.112-55.014-43.375-82.628-57.252-35.242-17.713-70.324-26.693-104.271-26.693s-69.029 8.98-104.272 26.693c-27.614 13.877-55.413 33.14-82.628 57.252-25.133 22.269-44.974 44.382-57.994 60.134-7.176 8.683-11.106 19.583-11.106 30.848v.146c0-4.176 1.741-8.163 4.804-11.002 1.152-1.068 28.741-26.455 73.324-52.012 41.372-23.715 105.815-51.986 177.872-51.986 39.772 0 102.916 9.02 177.872 51.986 44.583 25.557 72.172 50.943 73.324 52.012 3.063 2.839 4.804 6.826 4.804 11.002v-.146c0-11.265-3.93-22.165-11.107-30.848z"/>
+														</g>
+													</g>
+												</svg>
+											</div>
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Cataract Surgery</a>
+											</h3>
+											<div class="pbmit-serv-cat">
+												<a href="{{ route('services.index') }}" rel="tag">Lens Coating</a>, 
+												<a href="{{ route('services.index') }}" rel="tag">Vision Testing</a>
+											</div>
+											<div class="pbmit-service-description">
+												Common treatments include eye drops, medications, surgeries, and protective lifestyle changes.					
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<article class="pbmit-service-style-1">
+								<div class="pbminfotech-post-item">
+									<div class="pbmit-box-content-wrap">
+										<div class="pbmit-featured-img-wrapper">
+											<div class="pbmit-featured-wrapper">
+												<img src="{{ asset(\'frontend/images/service/service-img-02.jpg\') }}" class="img-fluid" alt="">
+											</div>
+										</div>
+										<a class="pbmit-link" href="{{ route('services.show', 'service-slug') }}" title="Go to Ocular Oncology"></a>
+										<div class="pbmit-heading-box">
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Ocular Oncology</a>
+											</h3>
+										</div>
+										<div class="pbmit-content-box">
+											<div class="pbmit-service-number">02</div>
+											<div class="pbmit-service-icon">
+												<svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m497 0h-120c-8.284 0-15 6.716-15 15s6.716 15 15 15h105v105c0 8.284 6.716 15 15 15s15-6.716 15-15v-120c0-8.284-6.716-15-15-15z"></path><path d="m15 150c8.284 0 15-6.716 15-15v-105h105c8.284 0 15-6.716 15-15s-6.716-15-15-15h-120c-8.284 0-15 6.716-15 15v120c0 8.284 6.716 15 15 15z"></path><path d="m497 362c-8.284 0-15 6.716-15 15v105h-105c-8.284 0-15 6.716-15 15s6.716 15 15 15h120c8.284 0 15-6.716 15-15v-120c0-8.284-6.716-15-15-15z"></path><path d="m135 482h-105v-105c0-8.284-6.716-15-15-15s-15 6.716-15 15v120c0 8.284 6.716 15 15 15h120c8.284 0 15-6.716 15-15s-6.716-15-15-15z"></path></g><g><path d="m507.196 267.002c-1.152 1.068-28.741 26.455-73.324 52.012-41.372 23.715-105.815 51.986-177.872 51.986-39.772 0-102.916-9.02-177.872-51.986-44.583-25.557-72.172-50.944-73.324-52.012-3.063-2.839-4.804-6.826-4.804-11.002 0 11.265 3.93 22.165 11.107 30.848 13.02 15.752 32.861 37.865 57.994 60.134 27.214 24.112 55.014 43.375 82.628 57.252 35.243 17.713 70.325 26.693 104.272 26.693s69.029-8.98 104.272-26.693c27.614-13.877 55.413-33.14 82.628-57.252 25.133-22.269 44.974-44.382 57.994-60.134 7.175-8.683 11.105-19.583 11.105-30.848 0 4.176-1.741 8.163-4.804 11.002z"></path><path d="m500.893 225.006c-13.02-15.752-32.861-37.865-57.994-60.134-27.214-24.112-55.014-43.375-82.628-57.252-35.242-17.713-70.324-26.693-104.271-26.693s-69.029 8.98-104.272 26.693c-27.614 13.877-55.413 33.14-82.628 57.252-25.133 22.269-44.974 44.382-57.994 60.134-7.176 8.682-11.106 19.583-11.106 30.848v.146c0-4.176 1.741-8.163 4.804-11.002 1.152-1.068 28.741-26.455 73.324-52.012 41.372-23.715 105.815-51.986 177.872-51.986 39.772 0 102.916 9.02 177.872 51.986 44.583 25.557 72.172 50.943 73.324 52.012 3.063 2.839 4.804 6.826 4.804 11.002v-.146c0-11.265-3.93-22.166-11.107-30.848z"></path></g><g><path d="m171 256c0 46.869 38.131 85 85 85s85-38.131 85-85-38.131-85-85-85-85 38.131-85 85zm85-45c24.813 0 45 20.187 45 45s-20.187 45-45 45-45-20.187-45-45 20.187-45 45-45z"></path><circle cx="256" cy="256" r="15"></circle><path d="m418.283 218.631c-18.912-10.798-43.01-22.622-70.464-31.79 14.544 19.26 23.181 43.219 23.181 69.159s-8.637 49.899-23.181 69.159c27.454-9.168 51.552-20.993 70.464-31.79 24.426-13.944 43.609-28.023 55.393-37.369-11.783-9.346-30.967-23.425-55.393-37.369z"></path><path d="m141 256c0-25.94 8.637-49.899 23.181-69.159-27.454 9.168-51.552 20.993-70.464 31.79-24.426 13.944-43.61 28.023-55.393 37.369 11.781 9.345 30.965 23.423 55.393 37.369 18.912 10.798 43.01 22.622 70.464 31.79-14.544-19.26-23.181-43.219-23.181-69.159z"></path></g></g></svg>
+											</div>
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Ocular Oncology</a>
+											</h3>
+											<div class="pbmit-serv-cat">
+												<a href="{{ route('services.index') }}" rel="tag">Eye Exams</a>, 
+												<a href="{{ route('services.index') }}" rel="tag">Glaucoma</a>
+											</div>
+											<div class="pbmit-service-description">
+												Common treatments include eye drops, medications, surgeries, and protective lifestyle changes.					
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<article class="pbmit-service-style-1">
+								<div class="pbminfotech-post-item">
+									<div class="pbmit-box-content-wrap">
+										<div class="pbmit-featured-img-wrapper">
+											<div class="pbmit-featured-wrapper">
+												<img src="{{ asset(\'frontend/images/service/service-img-03.jpg\') }}" class="img-fluid" alt="">
+											</div>
+										</div>
+										<a class="pbmit-link" href="{{ route('services.show', 'service-slug') }}" title="Go to Myopia Control"></a>
+										<div class="pbmit-heading-box">
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Myopia Control</a>
+											</h3>
+										</div>
+										<div class="pbmit-content-box">
+											<div class="pbmit-service-number">03</div>
+											<div class="pbmit-service-icon">
+												<svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><circle cx="256" cy="186" r="15"></circle><path d="m473.62 185.993c-11.781-9.346-30.958-23.422-55.373-37.363-18.901-10.793-42.985-22.614-70.421-31.78 14.54 19.259 23.174 43.214 23.174 69.15 0 25.956-8.648 49.928-23.208 69.196 58.293-19.518 104.371-52.213 125.828-69.203z"></path><path d="m38.379 186.007c11.78 9.345 30.956 23.42 55.374 37.363 18.901 10.793 42.985 22.614 70.421 31.78-14.54-19.259-23.174-43.214-23.174-69.15 0-25.956 8.648-49.928 23.208-69.196-58.293 19.518-104.371 52.213-125.829 69.203z"></path><path d="m341 186c0-46.869-38.131-85-85-85s-85 38.131-85 85 38.131 85 85 85 85-38.131 85-85zm-130 0c0-24.813 20.187-45 45-45s45 20.187 45 45-20.187 45-45 45-45-20.187-45-45z"></path><path d="m166 287.178v183.822c0 16.569 13.431 30 30 30s30-13.431 30-30v-80c0-16.569 13.431-30 30-30s30 13.431 30 30v40c0 16.569 13.431 30 30 30s30-13.431 30-30v-143.822c-27.607 8.256-58.052 13.822-90 13.822s-62.393-5.566-90-13.822z"></path><g><g><path d="m507.196 197.075c-1.152 1.068-28.741 26.455-73.324 52.012-16.097 9.228-35.7 19.139-57.872 27.812v48.932c22.411-12.885 44.847-29.237 66.899-48.776 25.133-22.269 44.974-44.382 57.994-60.134 7.177-8.683 11.107-19.583 11.107-30.848 0 4.176-1.741 8.163-4.804 11.002z"></path><path d="m78.128 249.087c-44.583-25.557-72.172-50.944-73.324-52.012-3.063-2.839-4.804-6.826-4.804-11.002 0 11.265 3.93 22.165 11.107 30.848 13.02 15.752 32.861 37.865 57.994 60.134 22.052 19.539 44.489 35.891 66.899 48.776v-48.901c-18.282-7.141-37.642-16.247-57.872-27.843z"></path></g><path d="m500.893 155.079c-13.02-15.752-32.861-37.865-57.994-60.134-27.214-24.112-55.014-43.375-82.628-57.252-35.242-17.713-70.324-26.693-104.271-26.693s-69.029 8.98-104.272 26.693c-27.614 13.877-55.413 33.14-82.628 57.252-25.133 22.269-44.974 44.382-57.994 60.134-7.176 8.683-11.106 19.583-11.106 30.848v.146c0-4.176 1.741-8.163 4.804-11.002 1.152-1.068 28.741-26.455 73.324-52.012 41.372-23.715 105.815-51.986 177.872-51.986 39.772 0 102.916 9.02 177.872 51.986 44.583 25.557 72.172 50.943 73.324 52.012 3.063 2.839 4.804 6.826 4.804 11.002v-.146c0-11.265-3.93-22.165-11.107-30.848z"></path></g></g></svg>
+											</div>
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Myopia Control</a>
+											</h3>
+											<div class="pbmit-serv-cat">
+												<a href="{{ route('services.index') }}" rel="tag">Glaucoma</a>, 
+												<a href="{{ route('services.index') }}" rel="tag">Lasek Option</a>
+											</div>
+											<div class="pbmit-service-description">
+												Common treatments include eye drops, medications, surgeries, and protective lifestyle changes.					
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<article class="pbmit-service-style-1">
+								<div class="pbminfotech-post-item">
+									<div class="pbmit-box-content-wrap">
+										<div class="pbmit-featured-img-wrapper">
+											<div class="pbmit-featured-wrapper">
+												<img src="{{ asset(\'frontend/images/service/service-img-04.jpg\') }}" class="img-fluid" alt="">
+											</div>
+										</div>
+										<a class="pbmit-link" href="{{ route('services.show', 'service-slug') }}" title="Go to Blink Point"></a>
+										<div class="pbmit-heading-box">
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Blink Point</a>
+											</h3>
+										</div>
+										<div class="pbmit-content-box">
+											<div class="pbmit-service-number">04</div>
+											<div class="pbmit-service-icon">
+												<svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><circle cx="256" cy="186" r="15"></circle><path d="m473.62 185.993c-11.781-9.346-30.958-23.422-55.373-37.363-18.901-10.793-42.985-22.614-70.421-31.78 14.54 19.259 23.174 43.214 23.174 69.15 0 25.956-8.648 49.928-23.208 69.196 58.293-19.518 104.371-52.213 125.828-69.203z"></path><path d="m38.379 186.007c11.78 9.345 30.956 23.42 55.374 37.363 18.901 10.793 42.985 22.614 70.421 31.78-14.54-19.259-23.174-43.214-23.174-69.15 0-25.956 8.648-49.928 23.208-69.196-58.293 19.518-104.371 52.213-125.829 69.203z"></path><path d="m341 186c0-46.869-38.131-85-85-85s-85 38.131-85 85 38.131 85 85 85 85-38.131 85-85zm-130 0c0-24.813 20.187-45 45-45s45 20.187 45 45-20.187 45-45 45-45-20.187-45-45z"></path><path d="m166 287.178v183.822c0 16.569 13.431 30 30 30s30-13.431 30-30v-80c0-16.569 13.431-30 30-30s30 13.431 30 30v40c0 16.569 13.431 30 30 30s30-13.431 30-30v-143.822c-27.607 8.256-58.052 13.822-90 13.822s-62.393-5.566-90-13.822z"></path><g><g><path d="m507.196 197.075c-1.152 1.068-28.741 26.455-73.324 52.012-16.097 9.228-35.7 19.139-57.872 27.812v48.932c22.411-12.885 44.847-29.237 66.899-48.776 25.133-22.269 44.974-44.382 57.994-60.134 7.177-8.683 11.107-19.583 11.107-30.848 0 4.176-1.741 8.163-4.804 11.002z"></path><path d="m78.128 249.087c-44.583-25.557-72.172-50.944-73.324-52.012-3.063-2.839-4.804-6.826-4.804-11.002 0 11.265 3.93 22.165 11.107 30.848 13.02 15.752 32.861 37.865 57.994 60.134 22.052 19.539 44.489 35.891 66.899 48.776v-48.901c-18.282-7.141-37.642-16.247-57.872-27.843z"></path></g><path d="m500.893 155.079c-13.02-15.752-32.861-37.865-57.994-60.134-27.214-24.112-55.014-43.375-82.628-57.252-35.242-17.713-70.324-26.693-104.271-26.693s-69.029 8.98-104.272 26.693c-27.614 13.877-55.413 33.14-82.628 57.252-25.133 22.269-44.974 44.382-57.994 60.134-7.176 8.683-11.106 19.583-11.106 30.848v.146c0-4.176 1.741-8.163 4.804-11.002 1.152-1.068 28.741-26.455 73.324-52.012 41.372-23.715 105.815-51.986 177.872-51.986 39.772 0 102.916 9.02 177.872 51.986 44.583 25.557 72.172 50.943 73.324 52.012 3.063 2.839 4.804 6.826 4.804 11.002v-.146c0-11.265-3.93-22.165-11.107-30.848z"></path></g></g></svg>
+											</div>
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Blink Point</a>
+											</h3>
+											<div class="pbmit-serv-cat">
+												<a href="{{ route('services.index') }}" rel="tag">Pediatric Care</a>, 
+												<a href="{{ route('services.index') }}" rel="tag">Vision therapy</a>
+											</div>
+											<div class="pbmit-service-description">
+												Common treatments include eye drops, medications, surgeries, and protective lifestyle changes.					
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<article class="pbmit-service-style-1">
+								<div class="pbminfotech-post-item">
+									<div class="pbmit-box-content-wrap">
+										<div class="pbmit-featured-img-wrapper">
+											<div class="pbmit-featured-wrapper">
+												<img src="{{ asset(\'frontend/images/service/service-img-05.jpg\') }}" class="img-fluid" alt="">
+											</div>
+										</div>
+										<a class="pbmit-link" href="{{ route('services.show', 'service-slug') }}" title="Go to Oculoplasty"></a>
+										<div class="pbmit-heading-box">
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Oculoplasty</a>
+											</h3>
+										</div>
+										<div class="pbmit-content-box">
+											<div class="pbmit-service-number">05</div>
+											<div class="pbmit-service-icon">
+												<svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m88.5 60v315c0 8.284 6.716 15 15 15h137.5v34.58c-17.459 6.192-30 22.865-30 42.42 0 24.813 20.187 45 45 45s45-20.187 45-45c0-19.555-12.541-36.228-30-42.42v-34.58h137.5c8.284 0 15-6.716 15-15v-315zm123.181 285c0 8.284-6.716 15-15 15s-15-6.716-15-15v-26.372h-25.361v26.372c0 8.284-6.716 15-15 15s-15-6.716-15-15v-80c0-8.284 6.716-15 15-15s15 6.716 15 15v23.628h25.361v-23.628c0-8.284 6.716-15 15-15s15 6.716 15 15zm44.319 137c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15zm-23.175-252c-8.284 0-15-6.716-15-15v-110c0-8.284 6.716-15 15-15h46.35c8.284 0 15 6.716 15 15s-6.716 15-15 15h-31.35v25h27.932c8.284 0 15 6.716 15 15s-6.716 15-15 15h-27.932v25h31.35c8.284 0 15 6.716 15 15s-6.716 15-15 15zm152.969 89.991c0 15.24-8.285 27.806-23.33 35.382-6.096 3.07-12.797 4.627-19.915 4.627-.022 0-.045 0-.068 0-8.315-.011-15.987-2.224-22.8-6.577-12.923-8.256-19.476-19.485-19.476-33.375v-55.048c0-8.284 6.716-15 15-15s15 6.716 15 15v55.049c0 2.549.414 4.764 5.627 8.093 1.951 1.247 4.14 1.854 6.69 1.858 2.407.035 4.542-.461 6.447-1.421 6.824-3.437 6.824-6.662 6.824-8.588v-54.991c0-8.284 6.716-15 15-15s15 6.716 15 15v54.991z"></path><path d="m458.5 0h-405c-8.284 0-15 6.716-15 15s6.716 15 15 15h35 335 35c8.284 0 15-6.716 15-15s-6.716-15-15-15z"></path></g></svg>
+											</div>
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Oculoplasty</a>
+											</h3>
+											<div class="pbmit-serv-cat">
+												<a href="{{ route('services.index') }}" rel="tag">Eye Exams</a>, 
+												<a href="{{ route('services.index') }}" rel="tag">Vision Testing</a>
+											</div>
+											<div class="pbmit-service-description">
+												Common treatments include eye drops, medications, surgeries, and protective lifestyle changes.					
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<article class="pbmit-service-style-1">
+								<div class="pbminfotech-post-item">
+									<div class="pbmit-box-content-wrap">
+										<div class="pbmit-featured-img-wrapper">
+											<div class="pbmit-featured-wrapper">
+												<img src="{{ asset(\'frontend/images/service/service-img-06.jpg\') }}" class="img-fluid" alt="">
+											</div>
+										</div>
+										<a class="pbmit-link" href="{{ route('services.show', 'service-slug') }}" title="Go to Cornea"></a>
+										<div class="pbmit-heading-box">
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Cornea</a>
+											</h3>
+										</div>
+										<div class="pbmit-content-box">
+											<div class="pbmit-service-number">06</div>
+											<div class="pbmit-service-icon">
+												<svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m256 60c8.284 0 15-6.716 15-15v-30c0-8.284-6.716-15-15-15s-15 6.716-15 15v30c0 8.284 6.716 15 15 15z"></path><path d="m256 150c8.284 0 15-6.716 15-15v-30c0-8.284-6.716-15-15-15s-15 6.716-15 15v30c0 8.284 6.716 15 15 15z"></path><path d="m115.51 86.664c2.778 4.813 7.82 7.502 13.004 7.502 2.545 0 5.124-.648 7.486-2.012 7.175-4.142 9.633-13.316 5.49-20.49l-15-25.981c-4.143-7.175-13.316-9.632-20.49-5.49-7.175 4.142-9.633 13.316-5.49 20.49z"></path><path d="m160.51 164.606c2.778 4.813 7.82 7.502 13.004 7.502 2.545 0 5.124-.648 7.486-2.012 7.175-4.142 9.633-13.316 5.49-20.49l-15-25.981c-4.143-7.175-13.316-9.631-20.49-5.49-7.175 4.142-9.633 13.316-5.49 20.49z"></path><path d="m376 92.154c2.362 1.364 4.941 2.012 7.486 2.012 5.184 0 10.226-2.69 13.004-7.502l15-25.981c4.143-7.174 1.685-16.348-5.49-20.49-7.174-4.145-16.349-1.684-20.49 5.49l-15 25.981c-4.143 7.174-1.685 16.348 5.49 20.49z"></path><path d="m331 170.096c2.362 1.364 4.941 2.012 7.486 2.012 5.184 0 10.226-2.69 13.004-7.502l15-25.981c4.143-7.174 1.685-16.348-5.49-20.49-7.175-4.143-16.348-1.685-20.49 5.49l-15 25.981c-4.143 7.175-1.685 16.348 5.49 20.49z"></path><path d="m256 512c-3.401 0-6.802-1.152-9.579-3.457l-241-200c-6.375-5.291-7.254-14.747-1.964-21.122 5.289-6.375 14.747-7.255 21.122-1.964l231.421 192.051 231.421-192.05c6.373-5.289 15.83-4.412 21.122 1.964 5.29 6.375 4.411 15.832-1.964 21.122l-241 200c-2.777 2.304-6.177 3.456-9.579 3.456z"></path><g><g><path d="m405.014 314.86c-2.154-18.909-7.813-36.753-16.328-52.86-28.016 46.471-78.068 75-132.686 75s-104.67-28.529-132.687-75c-8.515 16.106-14.173 33.951-16.328 52.86l149.015 123.663z"></path></g><path d="m256 307c46.416 0 88.766-25.552 110.521-66.686l3.224-6.097c-10.081-11.716-21.943-21.854-35.163-30.002-6.196 15.115-16.509 28.041-29.938 37.456-14.304 10.029-31.124 15.329-48.644 15.329s-34.34-5.3-48.644-15.328c-13.43-9.415-23.742-22.341-29.938-37.456-13.22 8.147-25.082 18.285-35.163 30.002l3.224 6.097c21.756 41.133 64.105 66.685 110.521 66.685z"></path><path d="m256 227c22.908 0 43.039-13.853 51.287-35.292l.24-.623c-16.069-5.877-33.423-9.085-51.527-9.085s-35.458 3.208-51.527 9.085l.24.623c8.248 21.439 28.379 35.292 51.287 35.292z"></path></g></g></svg>
+											</div>
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Cornea</a>
+											</h3>
+											<div class="pbmit-serv-cat">
+												<a href="{{ route('services.index') }}" rel="tag">Glaucoma</a>, 
+												<a href="{{ route('services.index') }}" rel="tag">Lasek Option</a>
+											</div>
+											<div class="pbmit-service-description">
+												Common treatments include eye drops, medications, surgeries, and protective lifestyle changes.					
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<article class="pbmit-service-style-1">
+								<div class="pbminfotech-post-item">
+									<div class="pbmit-box-content-wrap">
+										<div class="pbmit-featured-img-wrapper">
+											<div class="pbmit-featured-wrapper">
+												<img src="{{ asset(\'frontend/images/service/service-img-07.jpg\') }}" class="img-fluid" alt="">
+											</div>
+										</div>
+										<a class="pbmit-link" href="{{ route('services.show', 'service-slug') }}" title="Go to Vitreoretinal"></a>
+										<div class="pbmit-heading-box">
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Vitreoretinal</a>
+											</h3>
+										</div>
+										<div class="pbmit-content-box">
+											<div class="pbmit-service-number">07</div>
+											<div class="pbmit-service-icon">
+												<svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><circle cx="472" cy="171" r="40"></circle><circle cx="416" cy="317" r="15"></circle><circle cx="356" cy="317" r="15"></circle><path d="m472 241c-38.09 0-69.151-30.587-69.962-68.487-3.636-.334-7.316-.513-11.038-.513-66.168 0-120 53.832-120 120v115c0 57.897 47.103 105 105 105 27.57 0 50-22.43 50-50v-55.193c49.926-15.179 85-61.62 85-114.807 0-20.105-4.978-39.067-13.753-55.73-7.838 3.043-16.347 4.73-25.247 4.73zm-81-14c8.284 0 15 6.716 15 15s-6.716 15-15 15-15-6.716-15-15 6.716-15 15-15zm-34 200c-8.284 0-15-6.716-15-15s6.716-15 15-15 15 6.716 15 15-6.716 15-15 15zm59-65c-11.517 0-22.032-4.353-30-11.495-7.968 7.142-18.483 11.495-30 11.495-24.813 0-45-20.187-45-45s20.187-45 45-45c11.517 0 22.032 4.353 30 11.495 7.968-7.141 18.483-11.495 30-11.495 24.813 0 45 20.187 45 45s-20.187 45-45 45z"></path><circle cx="40" cy="171" r="40"></circle><circle cx="96" cy="317" r="15"></circle><circle cx="156" cy="317" r="15"></circle><path d="m121 172c-3.722 0-7.402.179-11.038.513-.811 37.9-31.872 68.487-69.962 68.487-8.9 0-17.409-1.687-25.247-4.73-8.775 16.663-13.753 35.625-13.753 55.73 0 53.187 35.074 99.628 85 114.807v55.193c0 27.57 22.43 50 50 50 57.897 0 105-47.103 105-105v-115c0-66.168-53.832-120-120-120zm0 55c8.284 0 15 6.716 15 15s-6.716 15-15 15-15-6.716-15-15 6.716-15 15-15zm34 200c-8.284 0-15-6.716-15-15s6.716-15 15-15 15 6.716 15 15-6.716 15-15 15zm1-65c-11.517 0-22.032-4.353-30-11.495-7.968 7.142-18.483 11.495-30 11.495-24.813 0-45-20.187-45-45s20.187-45 45-45c11.517 0 22.032 4.353 30 11.495 7.968-7.141 18.483-11.495 30-11.495 24.813 0 45 20.187 45 45s-20.187 45-45 45z"></path><path d="m286 60h63c8.284 0 15-6.716 15-15v-30c0-8.284-6.716-15-15-15h-108c-8.284 0-15 6.716-15 15v75h60z"></path><path d="m291.358 180c20.605-18.353 46.281-31.113 74.642-35.893v-9.107c0-8.284-6.716-15-15-15h-190c-8.284 0-15 6.716-15 15v9.107c28.361 4.78 54.037 17.54 74.642 35.893z"></path></g></svg>
+											</div>
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Vitreoretinal</a>
+											</h3>
+											<div class="pbmit-serv-cat">
+												<a href="{{ route('services.index') }}" rel="tag">Pediatric Care</a>, 
+												<a href="{{ route('services.index') }}" rel="tag">Vision therapy</a>
+											</div>
+											<div class="pbmit-service-description">
+												Common treatments include eye drops, medications, surgeries, and protective lifestyle changes.					
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<article class="pbmit-service-style-1">
+								<div class="pbminfotech-post-item">
+									<div class="pbmit-box-content-wrap">
+										<div class="pbmit-featured-img-wrapper">
+											<div class="pbmit-featured-wrapper">
+												<img src="{{ asset(\'frontend/images/service/service-img-08.jpg\') }}" class="img-fluid" alt="">
+											</div>
+										</div>
+										<a class="pbmit-link" href="{{ route('services.show', 'service-slug') }}" title="Go to Glaucoma"></a>
+										<div class="pbmit-heading-box">
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Glaucoma</a>
+											</h3>
+										</div>
+										<div class="pbmit-content-box">
+											<div class="pbmit-service-number">08</div>
+											<div class="pbmit-service-icon">
+												<svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m414.394 236.606c2.928 2.929 6.767 4.394 10.606 4.394s7.678-1.465 10.606-4.394c5.858-5.857 5.858-15.355 0-21.213l-4.393-4.393h65.787c8.284 0 15-6.716 15-15s-6.716-15-15-15h-65.787l4.394-4.394c5.858-5.857 5.858-15.355 0-21.213-5.857-5.857-15.355-5.857-21.213 0l-30 30c-5.858 5.857-5.858 15.355 0 21.213z"></path><path d="m497 301h-65.787l4.394-4.394c5.858-5.857 5.858-15.355 0-21.213-5.857-5.857-15.355-5.857-21.213 0l-30 30c-5.858 5.857-5.858 15.355 0 21.213l30 30c2.928 2.929 6.767 4.394 10.606 4.394s7.678-1.465 10.606-4.394c5.858-5.857 5.858-15.355 0-21.213l-4.393-4.393h65.787c8.284 0 15-6.716 15-15s-6.716-15-15-15z"></path></g><g><g><path d="m80.197 301.288 114.493-22.616c-2.844-6.928-4.69-14.54-4.69-22.672s1.846-15.744 4.69-22.672l-114.493-22.616 15.147 14.426c3.896 3.711 5.507 9.224 4.221 14.447-1.286 5.225-5.271 9.359-10.444 10.838l-19.52 5.577 19.521 5.577c5.173 1.479 9.158 5.613 10.444 10.838 1.286 5.224-.324 10.736-4.221 14.447z"></path></g><g><path d="m280 256c0 11.095-3.422 21.228-8.158 29.959l61.222 27.21c10.902-16.767 16.936-36.534 16.936-57.169s-6.034-40.402-16.936-57.169l-61.222 27.21c4.736 8.731 8.158 18.864 8.158 29.959z"></path></g><g><path d="m237.486 282.953c.207-.259.417-.515.639-.758 6.137-7.332 11.875-16.822 11.875-26.195 0-9.393-5.824-18.956-11.969-26.29-.183-.204-.358-.416-.531-.631-.836-.978-1.676-1.918-2.504-2.805-7.154 7.639-14.996 18.768-14.996 29.726 0 10.939 7.897 22.118 15.004 29.727.823-.879 1.654-1.809 2.482-2.774z"></path></g><g><path d="m252.868 310.356c-4.374 4.203-7.833 6.871-8.898 7.666-2.66 1.986-5.815 2.978-8.97 2.978s-6.31-.992-8.971-2.979c-1.415-1.055-7.051-5.414-13.456-12.301l-177.166 34.996c-.973.192-1.948.285-2.912.285-5.521 0-10.701-3.058-13.313-8.101-3.069-5.924-1.857-13.162 2.974-17.763l33.514-31.918-44.79-12.797c-6.441-1.839-10.88-7.725-10.88-14.422 0 90.981 74.019 165 165 165 29.462 0 58.379-7.887 83.624-22.807 23.465-13.867 43.253-33.451 57.407-56.776 2.103-1.503 4.131-3.084 6.101-4.721z"></path></g><g><path d="m10.879 241.577 44.79-12.797-33.514-31.918c-4.831-4.601-6.043-11.839-2.974-17.763 3.068-5.924 9.681-9.109 16.226-7.815l177.166 34.996c6.406-6.888 12.042-11.246 13.457-12.302 5.322-3.973 12.619-3.973 17.941 0 1.065.794 4.524 3.463 8.898 7.666l59.264-26.34c-1.97-1.638-3.999-3.218-6.101-4.721-14.154-23.325-33.942-42.909-57.407-56.776-25.246-14.92-54.163-22.807-83.625-22.807-90.981 0-165 74.019-165 165 0-6.697 4.439-12.583 10.879-14.423z"></path></g></g></g></svg>
+											</div>
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Glaucoma</a>
+											</h3>
+											<div class="pbmit-serv-cat">
+												<a href="{{ route('services.index') }}" rel="tag">Lasek Option</a>, 
+												<a href="{{ route('services.index') }}" rel="tag">Lens Coating</a>
+											</div>
+											<div class="pbmit-service-description">
+												Common treatments include eye drops, medications, surgeries, and protective lifestyle changes.					
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<article class="pbmit-service-style-1">
+								<div class="pbminfotech-post-item">
+									<div class="pbmit-box-content-wrap">
+										<div class="pbmit-featured-img-wrapper">
+											<div class="pbmit-featured-wrapper">
+												<img src="{{ asset(\'frontend/images/service/service-img-09.jpg\') }}" class="img-fluid" alt="">
+											</div>
+										</div>
+										<a class="pbmit-link" href="{{ route('services.show', 'service-slug') }}" title="Go to Cataract & Refractive"></a>
+										<div class="pbmit-heading-box">
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Cataract & Refractive</a>
+											</h3>
+										</div>
+										<div class="pbmit-content-box">
+											<div class="pbmit-service-number">09</div>
+											<div class="pbmit-service-icon">
+												<svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m412 175c0 4.88-.484 9.647-1.378 14.269 6.409-5.171 11.798-10.175 15.888-14.247-4.09-4.057-9.474-9.043-15.872-14.2.883 4.595 1.362 9.33 1.362 14.178z"></path><path d="m337 130c-24.813 0-45 20.187-45 45s20.187 45 45 45 45-20.187 45-45-20.187-45-45-45zm0 60c-8.284 0-15-6.716-15-15s6.716-15 15-15 15 6.716 15 15-6.716 15-15 15z"></path><path d="m247.49 174.978c4.089 4.056 9.474 9.042 15.872 14.2-.883-4.594-1.362-9.33-1.362-14.178 0-4.88.484-9.647 1.378-14.269-6.409 5.172-11.798 10.175-15.888 14.247z"></path><path d="m337 0c-96.495 0-175 78.505-175 175s78.505 175 175 175 175-78.505 175-175-78.505-175-175-175zm121.594 184.517c-2.194 2.673-54.52 65.483-121.594 65.483s-119.4-62.81-121.594-65.483c-4.541-5.532-4.541-13.501 0-19.033 2.194-2.674 54.52-65.484 121.594-65.484s119.4 62.81 121.594 65.483c4.541 5.532 4.541 13.502 0 19.034z"></path><path d="m105.104 364.469c-5.858-5.858-15.355-5.858-21.213 0l-70.711 70.712c-17.573 17.574-17.573 46.066 0 63.639 17.573 17.573 46.066 17.573 63.639 0l70.711-70.711c5.858-5.858 5.858-15.355 0-21.213z"></path><path d="m169.478 293.025-46.696 46.696 49.497 49.497 46.696-46.696c-19.182-13.554-35.943-30.315-49.497-49.497z"></path></g></svg>
+											</div>
+											<h3 class="pbmit-service-title">
+												<a href="{{ route('services.show', 'service-slug') }}">Cataract & Refractive</a>
+											</h3>
+											<div class="pbmit-serv-cat">
+												<a href="{{ route('services.index') }}" rel="tag">Eye Exams</a>, 
+												<a href="{{ route('services.index') }}" rel="tag">Vision Testing</a>
+											</div>
+											<div class="pbmit-service-description">
+												Common treatments include eye drops, medications, surgeries, and protective lifestyle changes.					
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Services end --> 
+
+		</div>
+@endsection

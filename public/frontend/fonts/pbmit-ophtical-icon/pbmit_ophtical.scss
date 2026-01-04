@@ -1,0 +1,265 @@
+$pbmit_ophtical-font: "pbmit_ophtical";
+
+@font-face {
+    font-family: $pbmit_ophtical-font;
+    src: url("../pbmit-ophtical-icon/pbmit_ophtical.woff2?81a5cea7603d3094df1e63d3b53db2f0") format("woff2"),
+url("../pbmit-ophtical-icon/pbmit_ophtical.woff?81a5cea7603d3094df1e63d3b53db2f0") format("woff"),
+url("../pbmit-ophtical-icon/pbmit_ophtical.eot?81a5cea7603d3094df1e63d3b53db2f0#iefix") format("embedded-opentype"),
+url("../pbmit-ophtical-icon/pbmit_ophtical.ttf?81a5cea7603d3094df1e63d3b53db2f0") format("truetype"),
+url("../pbmit-ophtical-icon/pbmit_ophtical.svg?81a5cea7603d3094df1e63d3b53db2f0#pbmit_ophtical") format("svg");
+}
+
+i[class^="pbmit-ophtical-"]:before, i[class*=" pbmit-ophtical-icon-"]:before {
+    font-family: pbmit_ophtical !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$pbmit_ophtical-map: (
+    "lasik": "\f101",
+    "myopia": "\f102",
+    "injection": "\f103",
+    "optical": "\f104",
+    "optometrist": "\f105",
+    "hyperopia": "\f106",
+    "eye": "\f107",
+    "eye-1": "\f108",
+    "triangular-prism": "\f109",
+    "eye-drops": "\f10a",
+    "eye-2": "\f10b",
+    "eye-3": "\f10c",
+    "testing-glasses": "\f10d",
+    "glasses": "\f10e",
+    "operation": "\f10f",
+    "testing-glasses-1": "\f110",
+    "medical-report": "\f111",
+    "eyedropper": "\f112",
+    "surgery": "\f113",
+    "optometrist-1": "\f114",
+    "medical-prescription": "\f115",
+    "ophthalmoscope": "\f116",
+    "eye-4": "\f117",
+    "3d-scanner": "\f118",
+    "medical-prescription-1": "\f119",
+    "retinoscope": "\f11a",
+    "eye-exam": "\f11b",
+    "contact-lens": "\f11c",
+    "brock-cord": "\f11d",
+    "eye-drop": "\f11e",
+    "tears": "\f11f",
+    "contact-lens-1": "\f120",
+    "drugs": "\f121",
+    "eye-5": "\f122",
+    "blind": "\f123",
+    "eye-test": "\f124",
+    "filters": "\f125",
+    "infection": "\f126",
+    "lens": "\f127",
+    "multiestenope": "\f128",
+    "refraction": "\f129",
+    "refraction-1": "\f12a",
+    "retinoscope-1": "\f12b",
+    "skiascope": "\f12c",
+    "slit-lamp": "\f12d",
+    "contact-lens-2": "\f12e",
+    "diploma": "\f12f",
+    "divergence-cards": "\f130",
+    "doctor": "\f131",
+    "faq": "\f132",
+    "label": "\f133",
+    "check": "\f134",
+    "placeholder": "\f135",
+    "email": "\f136",
+    "telephone": "\f137",
+    "quote": "\f138",
+    "clock": "\f139",
+    "google-play": "\f13a",
+    "apple-logo": "\f13b",
+    "curved-arrow": "\f13c",
+);
+
+.pbmit-ophtical-icon-lasik:before {
+    content: map-get($pbmit_ophtical-map, "lasik");
+}
+.pbmit-ophtical-icon-myopia:before {
+    content: map-get($pbmit_ophtical-map, "myopia");
+}
+.pbmit-ophtical-icon-injection:before {
+    content: map-get($pbmit_ophtical-map, "injection");
+}
+.pbmit-ophtical-icon-optical:before {
+    content: map-get($pbmit_ophtical-map, "optical");
+}
+.pbmit-ophtical-icon-optometrist:before {
+    content: map-get($pbmit_ophtical-map, "optometrist");
+}
+.pbmit-ophtical-icon-hyperopia:before {
+    content: map-get($pbmit_ophtical-map, "hyperopia");
+}
+.pbmit-ophtical-icon-eye:before {
+    content: map-get($pbmit_ophtical-map, "eye");
+}
+.pbmit-ophtical-icon-eye-1:before {
+    content: map-get($pbmit_ophtical-map, "eye-1");
+}
+.pbmit-ophtical-icon-triangular-prism:before {
+    content: map-get($pbmit_ophtical-map, "triangular-prism");
+}
+.pbmit-ophtical-icon-eye-drops:before {
+    content: map-get($pbmit_ophtical-map, "eye-drops");
+}
+.pbmit-ophtical-icon-eye-2:before {
+    content: map-get($pbmit_ophtical-map, "eye-2");
+}
+.pbmit-ophtical-icon-eye-3:before {
+    content: map-get($pbmit_ophtical-map, "eye-3");
+}
+.pbmit-ophtical-icon-testing-glasses:before {
+    content: map-get($pbmit_ophtical-map, "testing-glasses");
+}
+.pbmit-ophtical-icon-glasses:before {
+    content: map-get($pbmit_ophtical-map, "glasses");
+}
+.pbmit-ophtical-icon-operation:before {
+    content: map-get($pbmit_ophtical-map, "operation");
+}
+.pbmit-ophtical-icon-testing-glasses-1:before {
+    content: map-get($pbmit_ophtical-map, "testing-glasses-1");
+}
+.pbmit-ophtical-icon-medical-report:before {
+    content: map-get($pbmit_ophtical-map, "medical-report");
+}
+.pbmit-ophtical-icon-eyedropper:before {
+    content: map-get($pbmit_ophtical-map, "eyedropper");
+}
+.pbmit-ophtical-icon-surgery:before {
+    content: map-get($pbmit_ophtical-map, "surgery");
+}
+.pbmit-ophtical-icon-optometrist-1:before {
+    content: map-get($pbmit_ophtical-map, "optometrist-1");
+}
+.pbmit-ophtical-icon-medical-prescription:before {
+    content: map-get($pbmit_ophtical-map, "medical-prescription");
+}
+.pbmit-ophtical-icon-ophthalmoscope:before {
+    content: map-get($pbmit_ophtical-map, "ophthalmoscope");
+}
+.pbmit-ophtical-icon-eye-4:before {
+    content: map-get($pbmit_ophtical-map, "eye-4");
+}
+.pbmit-ophtical-icon-3d-scanner:before {
+    content: map-get($pbmit_ophtical-map, "3d-scanner");
+}
+.pbmit-ophtical-icon-medical-prescription-1:before {
+    content: map-get($pbmit_ophtical-map, "medical-prescription-1");
+}
+.pbmit-ophtical-icon-retinoscope:before {
+    content: map-get($pbmit_ophtical-map, "retinoscope");
+}
+.pbmit-ophtical-icon-eye-exam:before {
+    content: map-get($pbmit_ophtical-map, "eye-exam");
+}
+.pbmit-ophtical-icon-contact-lens:before {
+    content: map-get($pbmit_ophtical-map, "contact-lens");
+}
+.pbmit-ophtical-icon-brock-cord:before {
+    content: map-get($pbmit_ophtical-map, "brock-cord");
+}
+.pbmit-ophtical-icon-eye-drop:before {
+    content: map-get($pbmit_ophtical-map, "eye-drop");
+}
+.pbmit-ophtical-icon-tears:before {
+    content: map-get($pbmit_ophtical-map, "tears");
+}
+.pbmit-ophtical-icon-contact-lens-1:before {
+    content: map-get($pbmit_ophtical-map, "contact-lens-1");
+}
+.pbmit-ophtical-icon-drugs:before {
+    content: map-get($pbmit_ophtical-map, "drugs");
+}
+.pbmit-ophtical-icon-eye-5:before {
+    content: map-get($pbmit_ophtical-map, "eye-5");
+}
+.pbmit-ophtical-icon-blind:before {
+    content: map-get($pbmit_ophtical-map, "blind");
+}
+.pbmit-ophtical-icon-eye-test:before {
+    content: map-get($pbmit_ophtical-map, "eye-test");
+}
+.pbmit-ophtical-icon-filters:before {
+    content: map-get($pbmit_ophtical-map, "filters");
+}
+.pbmit-ophtical-icon-infection:before {
+    content: map-get($pbmit_ophtical-map, "infection");
+}
+.pbmit-ophtical-icon-lens:before {
+    content: map-get($pbmit_ophtical-map, "lens");
+}
+.pbmit-ophtical-icon-multiestenope:before {
+    content: map-get($pbmit_ophtical-map, "multiestenope");
+}
+.pbmit-ophtical-icon-refraction:before {
+    content: map-get($pbmit_ophtical-map, "refraction");
+}
+.pbmit-ophtical-icon-refraction-1:before {
+    content: map-get($pbmit_ophtical-map, "refraction-1");
+}
+.pbmit-ophtical-icon-retinoscope-1:before {
+    content: map-get($pbmit_ophtical-map, "retinoscope-1");
+}
+.pbmit-ophtical-icon-skiascope:before {
+    content: map-get($pbmit_ophtical-map, "skiascope");
+}
+.pbmit-ophtical-icon-slit-lamp:before {
+    content: map-get($pbmit_ophtical-map, "slit-lamp");
+}
+.pbmit-ophtical-icon-contact-lens-2:before {
+    content: map-get($pbmit_ophtical-map, "contact-lens-2");
+}
+.pbmit-ophtical-icon-diploma:before {
+    content: map-get($pbmit_ophtical-map, "diploma");
+}
+.pbmit-ophtical-icon-divergence-cards:before {
+    content: map-get($pbmit_ophtical-map, "divergence-cards");
+}
+.pbmit-ophtical-icon-doctor:before {
+    content: map-get($pbmit_ophtical-map, "doctor");
+}
+.pbmit-ophtical-icon-faq:before {
+    content: map-get($pbmit_ophtical-map, "faq");
+}
+.pbmit-ophtical-icon-label:before {
+    content: map-get($pbmit_ophtical-map, "label");
+}
+.pbmit-ophtical-icon-check:before {
+    content: map-get($pbmit_ophtical-map, "check");
+}
+.pbmit-ophtical-icon-placeholder:before {
+    content: map-get($pbmit_ophtical-map, "placeholder");
+}
+.pbmit-ophtical-icon-email:before {
+    content: map-get($pbmit_ophtical-map, "email");
+}
+.pbmit-ophtical-icon-telephone:before {
+    content: map-get($pbmit_ophtical-map, "telephone");
+}
+.pbmit-ophtical-icon-quote:before {
+    content: map-get($pbmit_ophtical-map, "quote");
+}
+.pbmit-ophtical-icon-clock:before {
+    content: map-get($pbmit_ophtical-map, "clock");
+}
+.pbmit-ophtical-icon-google-play:before {
+    content: map-get($pbmit_ophtical-map, "google-play");
+}
+.pbmit-ophtical-icon-apple-logo:before {
+    content: map-get($pbmit_ophtical-map, "apple-logo");
+}
+.pbmit-ophtical-icon-curved-arrow:before {
+    content: map-get($pbmit_ophtical-map, "curved-arrow");
+}

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ophtical Webfont</title>
+    <link rel="stylesheet" type="text/css" href="pbmit_ophtical.css"/>
+    <meta charset="UTF-8">
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        body {
+            font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #777777;
+        }
+
+        a {
+            color: #52D999;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        * {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        [class^="pbmit-ophtical-icon-"]:before, [class*=" pbmit-ophtical-icon-"]:before, [class^="pbmit-ophtical-icon-"]:after, [class*=" pbmit-ophtical-icon-"]:after {
+            font-family: pbmit_ophtical;
+            font-size: 32px;
+            line-height: 1.25;
+            font-style: normal;
+            margin-left: 20px;
+            color: #424242;
+        }
+
+        .wrapper {
+            max-width: 600px;
+            margin: auto;
+            padding: 0 1em;
+        }
+
+        .title {
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        header {
+            text-align: center;
+            padding: 24px;
+        }
+
+        header .logo {
+            height: auto;
+            border: none;
+            display: inline-block;
+        }
+
+        header strong {
+            font-size: 24px;
+            line-height: 1.25;
+            font-weight: 500;
+            vertical-align: middle;
+        }
+
+        .demo {
+            margin: 2em auto;
+            line-height: 1.25;
+        }
+
+        .demo ul li {
+            margin-bottom: 12px;
+        }
+
+        .demo ul li code {
+            background-color: #121212;
+            border-radius: 3px;
+            padding: 12px;
+            display: inline-block;
+            color: #fff;
+            font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+            font-weight: lighter;
+            margin-top: 12px;
+            font-size: 13px;
+            word-break: break-all;
+        }
+
+        .demo ul li code .red {
+            color: #EB644C;
+        }
+
+        .demo ul li code .green {
+            color: #52D999;
+        }
+
+        .demo ul li code .yellow {
+            color: #FFF4D9;
+        }
+
+        .demo ul li code .blue {
+            color: #648EEF;
+        }
+
+        .demo ul li code .purple {
+            color: #6569BD;
+        }
+
+        .demo ul li code .dots {
+            margin-top: 0.5em;
+            display: block;
+        }
+
+        #glyphs {
+            border-bottom: 1px solid #E5E5E5;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        .glyph {
+            display: inline-block;
+            width: 9em;
+            margin: 1em;
+            text-align: center;
+            vertical-align: top;
+            background: #FFF;
+        }
+
+        .glyph .pbmit-ophtical-icon {
+            padding: 10px;
+            display: block;
+            font-family: "pbmit_ophtical";
+            font-size: 64px;
+            line-height: 1;
+        }
+
+        .glyph .pbmit-ophtical-icon:before {
+            font-size: 64px;
+            color: #777777;
+            margin-left: 0;
+        }
+
+        .class-name {
+            font-size: 0.65em;
+            background-color: #E5E5E5;
+            color: #9C9C9C;
+            border-radius: 4px 4px 0 0;
+            padding: 0.5em;
+            font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        }
+
+        .author-name {
+            font-size: 0.6em;
+            background-color: #EFF3F6;
+            border-top: 0;
+            border-radius: 0 0 4px 4px;
+            padding: 0.5em;
+        }
+
+        .author-name a {
+            color: #121212;
+        }
+
+        .class-name:last-child {
+            font-size: 10px;
+            line-height: 1.75;
+            color: #888;
+        }
+
+        .class-name:last-child a {
+            font-size: 10px;
+            line-height: 1.75;
+            color: #555;
+        }
+
+        .glyph > input {
+            display: block;
+            width: 100px;
+            margin: 5px auto;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.75;
+            cursor: text;
+        }
+
+        .glyph > input.icon-input {
+            font-family: "pbmit_ophtical";
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .attribution .title {
+            margin-top: 2em;
+        }
+
+        .attribution textarea {
+            background-color: #F8FAFB;
+            color: #121212;
+            padding: 1em;
+            border: none;
+            box-shadow: none;
+            border: 1px solid #E5E5E5;
+            border-radius: 4px;
+            resize: none;
+            width: 100%;
+            height: 150px;
+            font-size: 13px;
+            line-height: 1.6;
+            font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+            -webkit-appearance: none;
+        }
+
+        .attribution textarea:hover {
+            border-color: #CFD9E0;
+        }
+
+        .attribution textarea:focus {
+            border-color: #52D999;
+        }
+
+        .iconsuse {
+            margin: 2em auto;
+            text-align: center;
+            max-width: 1200px;
+        }
+
+        .iconsuse:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .iconsuse .image {
+            float: left;
+            width: 25%;
+            padding: 0 1em;
+        }
+
+        .iconsuse .image p {
+            margin-bottom: 1em;
+        }
+
+        .iconsuse .image span {
+            display: block;
+            font-size: 0.65em;
+            background-color: #222;
+            color: #fff;
+            border-radius: 4px;
+            padding: 10px;
+            color: #FFFF99;
+            margin-top: 1em;
+            font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        }
+
+        .pbmit-ophtical-icon:before {
+            color: #777777;
+        }
+
+        #footer {
+            text-align: center;
+            background-color: #121212;
+            color: #9C9C9C;
+            padding: 12px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        #footer a {
+            font-weight: normal;
+        }
+
+        @media (max-width: 960px) {
+            .iconsuse .image {
+                width: 50%;
+            }
+        }
+
+        .preview {
+            width: 100px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .preview .inner {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background: #F7F7F7;
+            -webkit-border-radius: 3px 3px 0 0;
+            -moz-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .preview .inner  {
+            line-height: 85px;
+            font-size: 40px;
+            color: #424242;
+        }
+
+        .label {
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            font-size: 10px;
+            font-family: Monaco, monospace;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: #ddd;
+            -webkit-border-radius: 0 0 3px 3px;
+            -moz-border-radius: 0 0 3px 3px;
+            border-radius: 0 0 3px 3px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <section class="demo wrapper">
+
+        <p class="title">Webfont Instructions</p>
+
+        <ul>
+            <li>
+                <span class="num">1. </span>Copy the "Fonts" files and CSS files to your website CSS folder.
+            </li>
+            <li>
+                <span class="num">2. </span>Add the CSS link to your website source code on header.
+                <code class="big">
+                    &lt;<span class="red">head</span>&gt;
+                    <br/><span class="dots">...</span>
+                    <br/>&lt;<span class="red">link</span> <span class="green">rel</span>=<span
+                        class="yellow">"stylesheet"</span> <span class="green">type</span>=<span
+                        class="yellow">"text/css"</span> <span class="green">href</span>=<span class="yellow">"your_website_domain/css_root/pbmit_ophtical.css"</span>&gt;
+                    <br/><span class="dots">...</span>
+                    <br/>&lt;/<span class="red">head</span>&gt;
+                </code>
+            </li>
+
+            <li>
+                <p>
+                    <span class="num">3. </span>Use the icon class on <code>"<span class="blue">display</span>:<span
+                        class="purple"> inline</span>"</code> elements:
+                    <br/>
+                    Use example: <code>&lt;<span class="red">i</span> <span class="green">class</span>=<span class="yellow">&quot;pbmit-airplane49&quot;</span>&gt;&lt;/<span
+                        class="red">i</span>&gt;</code> or <code>&lt;<span class="red">span</span> <span
+                        class="green">class</span>=<span class="yellow">&quot;pbmit-airplane49&quot;</span>&gt;&lt;/<span
+                        class="red">span</span>&gt;</code>
+            </li>
+        </ul>
+
+    </section>
+    <section id="glyphs">
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-lasik"></i>
+                <div class="class-name">.pbmit-lasik</div>
+                <div class="author-name">Author: #author-link-pbmit-lasik# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-myopia"></i>
+                <div class="class-name">.pbmit-myopia</div>
+                <div class="author-name">Author: #author-link-pbmit-myopia# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-injection"></i>
+                <div class="class-name">.pbmit-injection</div>
+                <div class="author-name">Author: #author-link-pbmit-injection# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-optical"></i>
+                <div class="class-name">.pbmit-optical</div>
+                <div class="author-name">Author: #author-link-pbmit-optical# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-optometrist"></i>
+                <div class="class-name">.pbmit-optometrist</div>
+                <div class="author-name">Author: #author-link-pbmit-optometrist# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-hyperopia"></i>
+                <div class="class-name">.pbmit-hyperopia</div>
+                <div class="author-name">Author: #author-link-pbmit-hyperopia# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-eye"></i>
+                <div class="class-name">.pbmit-eye</div>
+                <div class="author-name">Author: #author-link-pbmit-eye# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-eye-1"></i>
+                <div class="class-name">.pbmit-eye-1</div>
+                <div class="author-name">Author: #author-link-pbmit-eye-1# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-triangular-prism"></i>
+                <div class="class-name">.pbmit-triangular-prism</div>
+                <div class="author-name">Author: #author-link-pbmit-triangular-prism# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-eye-drops"></i>
+                <div class="class-name">.pbmit-eye-drops</div>
+                <div class="author-name">Author: #author-link-pbmit-eye-drops# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-eye-2"></i>
+                <div class="class-name">.pbmit-eye-2</div>
+                <div class="author-name">Author: #author-link-pbmit-eye-2# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-eye-3"></i>
+                <div class="class-name">.pbmit-eye-3</div>
+                <div class="author-name">Author: #author-link-pbmit-eye-3# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-testing-glasses"></i>
+                <div class="class-name">.pbmit-testing-glasses</div>
+                <div class="author-name">Author: #author-link-pbmit-testing-glasses# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-glasses"></i>
+                <div class="class-name">.pbmit-glasses</div>
+                <div class="author-name">Author: #author-link-pbmit-glasses# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-operation"></i>
+                <div class="class-name">.pbmit-operation</div>
+                <div class="author-name">Author: #author-link-pbmit-operation# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-testing-glasses-1"></i>
+                <div class="class-name">.pbmit-testing-glasses-1</div>
+                <div class="author-name">Author: #author-link-pbmit-testing-glasses-1# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-medical-report"></i>
+                <div class="class-name">.pbmit-medical-report</div>
+                <div class="author-name">Author: #author-link-pbmit-medical-report# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-eyedropper"></i>
+                <div class="class-name">.pbmit-eyedropper</div>
+                <div class="author-name">Author: #author-link-pbmit-eyedropper# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-surgery"></i>
+                <div class="class-name">.pbmit-surgery</div>
+                <div class="author-name">Author: #author-link-pbmit-surgery# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-optometrist-1"></i>
+                <div class="class-name">.pbmit-optometrist-1</div>
+                <div class="author-name">Author: #author-link-pbmit-optometrist-1# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-medical-prescription"></i>
+                <div class="class-name">.pbmit-medical-prescription</div>
+                <div class="author-name">Author: #author-link-pbmit-medical-prescription# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-ophthalmoscope"></i>
+                <div class="class-name">.pbmit-ophthalmoscope</div>
+                <div class="author-name">Author: #author-link-pbmit-ophthalmoscope# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-eye-4"></i>
+                <div class="class-name">.pbmit-eye-4</div>
+                <div class="author-name">Author: #author-link-pbmit-eye-4# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-3d-scanner"></i>
+                <div class="class-name">.pbmit-3d-scanner</div>
+                <div class="author-name">Author: #author-link-pbmit-3d-scanner# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-medical-prescription-1"></i>
+                <div class="class-name">.pbmit-medical-prescription-1</div>
+                <div class="author-name">Author: #author-link-pbmit-medical-prescription-1# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-retinoscope"></i>
+                <div class="class-name">.pbmit-retinoscope</div>
+                <div class="author-name">Author: #author-link-pbmit-retinoscope# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-eye-exam"></i>
+                <div class="class-name">.pbmit-eye-exam</div>
+                <div class="author-name">Author: #author-link-pbmit-eye-exam# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-contact-lens"></i>
+                <div class="class-name">.pbmit-contact-lens</div>
+                <div class="author-name">Author: #author-link-pbmit-contact-lens# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-brock-cord"></i>
+                <div class="class-name">.pbmit-brock-cord</div>
+                <div class="author-name">Author: #author-link-pbmit-brock-cord# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-eye-drop"></i>
+                <div class="class-name">.pbmit-eye-drop</div>
+                <div class="author-name">Author: #author-link-pbmit-eye-drop# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-tears"></i>
+                <div class="class-name">.pbmit-tears</div>
+                <div class="author-name">Author: #author-link-pbmit-tears# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-contact-lens-1"></i>
+                <div class="class-name">.pbmit-contact-lens-1</div>
+                <div class="author-name">Author: #author-link-pbmit-contact-lens-1# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-drugs"></i>
+                <div class="class-name">.pbmit-drugs</div>
+                <div class="author-name">Author: #author-link-pbmit-drugs# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-eye-5"></i>
+                <div class="class-name">.pbmit-eye-5</div>
+                <div class="author-name">Author: #author-link-pbmit-eye-5# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-blind"></i>
+                <div class="class-name">.pbmit-blind</div>
+                <div class="author-name">Author: #author-link-pbmit-blind# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-eye-test"></i>
+                <div class="class-name">.pbmit-eye-test</div>
+                <div class="author-name">Author: #author-link-pbmit-eye-test# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-filters"></i>
+                <div class="class-name">.pbmit-filters</div>
+                <div class="author-name">Author: #author-link-pbmit-filters# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-infection"></i>
+                <div class="class-name">.pbmit-infection</div>
+                <div class="author-name">Author: #author-link-pbmit-infection# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-lens"></i>
+                <div class="class-name">.pbmit-lens</div>
+                <div class="author-name">Author: #author-link-pbmit-lens# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-multiestenope"></i>
+                <div class="class-name">.pbmit-multiestenope</div>
+                <div class="author-name">Author: #author-link-pbmit-multiestenope# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-refraction"></i>
+                <div class="class-name">.pbmit-refraction</div>
+                <div class="author-name">Author: #author-link-pbmit-refraction# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-refraction-1"></i>
+                <div class="class-name">.pbmit-refraction-1</div>
+                <div class="author-name">Author: #author-link-pbmit-refraction-1# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-retinoscope-1"></i>
+                <div class="class-name">.pbmit-retinoscope-1</div>
+                <div class="author-name">Author: #author-link-pbmit-retinoscope-1# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-skiascope"></i>
+                <div class="class-name">.pbmit-skiascope</div>
+                <div class="author-name">Author: #author-link-pbmit-skiascope# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-slit-lamp"></i>
+                <div class="class-name">.pbmit-slit-lamp</div>
+                <div class="author-name">Author: #author-link-pbmit-slit-lamp# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-contact-lens-2"></i>
+                <div class="class-name">.pbmit-contact-lens-2</div>
+                <div class="author-name">Author: #author-link-pbmit-contact-lens-2# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-diploma"></i>
+                <div class="class-name">.pbmit-diploma</div>
+                <div class="author-name">Author: #author-link-pbmit-diploma# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-divergence-cards"></i>
+                <div class="class-name">.pbmit-divergence-cards</div>
+                <div class="author-name">Author: #author-link-pbmit-divergence-cards# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-doctor"></i>
+                <div class="class-name">.pbmit-doctor</div>
+                <div class="author-name">Author: #author-link-pbmit-doctor# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-faq"></i>
+                <div class="class-name">.pbmit-faq</div>
+                <div class="author-name">Author: #author-link-pbmit-faq# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-label"></i>
+                <div class="class-name">.pbmit-label</div>
+                <div class="author-name">Author: #author-link-pbmit-label# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-check"></i>
+                <div class="class-name">.pbmit-check</div>
+                <div class="author-name">Author: #author-link-pbmit-check# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-placeholder"></i>
+                <div class="class-name">.pbmit-placeholder</div>
+                <div class="author-name">Author: #author-link-pbmit-placeholder# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-email"></i>
+                <div class="class-name">.pbmit-email</div>
+                <div class="author-name">Author: #author-link-pbmit-email# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-telephone"></i>
+                <div class="class-name">.pbmit-telephone</div>
+                <div class="author-name">Author: #author-link-pbmit-telephone# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-quote"></i>
+                <div class="class-name">.pbmit-quote</div>
+                <div class="author-name">Author: #author-link-pbmit-quote# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-clock"></i>
+                <div class="class-name">.pbmit-clock</div>
+                <div class="author-name">Author: #author-link-pbmit-clock# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-google-play"></i>
+                <div class="class-name">.pbmit-google-play</div>
+                <div class="author-name">Author: #author-link-pbmit-google-play# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-apple-logo"></i>
+                <div class="class-name">.pbmit-apple-logo</div>
+                <div class="author-name">Author: #author-link-pbmit-apple-logo# </div>
+            </div>
+
+            <div class="glyph">
+                <i class="pbmit-ophtical-icon pbmit-ophtical-icon-curved-arrow"></i>
+                <div class="class-name">.pbmit-curved-arrow</div>
+                <div class="author-name">Author: #author-link-pbmit-curved-arrow# </div>
+            </div>
+
+    </section>
+
+    <div id="footer">
+        <div>Generated by <a href="https://www.pbminfotech.com">PBMinfotech</a></div>
+    </div>
+
+</body>
+</html>

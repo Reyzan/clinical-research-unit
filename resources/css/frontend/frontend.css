@@ -1,0 +1,21 @@
+/* Frontend Bundle - Bootstrap-based template styles */
+/* DO NOT use Tailwind classes in frontend views */
+
+/* Core Framework */
+@import './bootstrap.min.css';
+
+/* Icon Fonts */
+@import './fontawesome.css';
+@import './themify-icons.css';
+@import './pbminfotech-base-icons.css';
+
+/* Third-party Plugins */
+@import './swiper.min.css';
+@import './aos.css';
+@import './magnific-popup.css';
+
+/* Template Styles (Order matters!) */
+@import './base.css';
+@import './shortcode.css';
+@import './style.css';
+@import './responsive.css';
