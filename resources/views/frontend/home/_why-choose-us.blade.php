@@ -46,19 +46,11 @@
             <div class="col-md-12 col-xl-4 why-choose-one-center-col animation animated fadeIn">
                 <div class="why-choose-one-center-area">
                     <div class="gap-20 top-inner-box">
-                        <div>
-                            <img src="{{ asset('frontend/images/demo-1/eye-goggles.png') }}" alt="">
-                        </div>
-                        <div class="alpabet-img">
-                            <img src="{{ asset('frontend/images/demo-1/alpabet.png') }}" alt="">
-                        </div>
-                        <div class="girl-full-img">
-                            <img src="{{ asset('frontend/images/demo-1/girl-full-img.png') }}" alt="">
-                        </div>
+                       
                     </div>
                     <div class="girl-circle-img-wrap">
                         <div class="girl-circle-img">
-                            <img src="{{ asset('frontend/images/demo-1/girl-circle.png') }}" alt="">
+                            <img src="{{ asset('frontend/images/why-choose-us/why-choose-us-square.png') }}" alt="">
                         </div>
                         <div class="girl-circle-bg"></div>
                     </div>

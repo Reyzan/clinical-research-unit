@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -20,6 +21,7 @@
 
     @stack('styles')
 </head>
+
 <body class="@yield('body_class')">
 
     <!-- Page Wrapper -->
@@ -45,7 +47,8 @@
         <div class="pbmit-search-overlay"></div>
         <div class="pbmit-header-search-form-wrapper">
             <div class="pbmit-search-close">
-                <svg class="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg" width="28.163" height="28.163" viewBox="0 0 26.163 26.163">
+                <svg class="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg" width="28.163" height="28.163"
+                    viewBox="0 0 26.163 26.163">
                     <rect width="36" height="1" transform="translate(0.707) rotate(45)"></rect>
                     <rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect>
                 </svg>
@@ -97,4 +100,5 @@
 
     @stack('scripts')
 </body>
+
 </html>

@@ -31,11 +31,11 @@
 											</div>
 										</div>
 										<h2 class="pbmit-element-title">Call Us</h2>
-										<div class="pbmit-heading-desc">Call us 24/7 with any emergency or to schedule an appointment &amp; check your health.</div>
+										<div class="pbmit-heading-desc">Call us during office hours for research inquiries and appointments.</div>
 									</div>
 								</div>
 								<div class="custom-heading">
-									<h6 class="pbmit-title">Monday-Friday: 9am To 5pm</h6>
+									<h6 class="pbmit-title">Monday-Saturday: 8am To 5pm</h6>
 									<p>Sunday: Closed</p>
 								</div>
 							</div>
@@ -50,12 +50,12 @@
 											</div>
 										</div>
 										<h2 class="pbmit-element-title">Visit Us</h2>
-										<div class="pbmit-heading-desc">Expert eye care in a welcoming environment—walk in or book your appointment today.</div>
+										<div class="pbmit-heading-desc">World-class clinical research in a professional environment—visit us or schedule your participation.</div>
 									</div>
 								</div>
 								<div class="custom-heading">
-									<h6 class="pbmit-title">Visit our NY office</h6>
-									<p>Los Angeles Gournandi, 1230 Bariasl</p>
+									<h6 class="pbmit-title">Visit Clinical Research Unit RSCM</h6>
+									<p>Jl. Pangeran Diponegoro No.69, RW.5, Senen, Kota Jakarta Pusat</p>
 								</div>
 							</div>
 						</div>
@@ -69,12 +69,12 @@
 											</div>
 										</div>
 										<h2 class="pbmit-element-title">Message Us</h2>
-										<div class="pbmit-heading-desc">Reach out anytime with your questions or concern. Our team is here to help you</div>
+										<div class="pbmit-heading-desc">Reach out with your research inquiries or questions. Our team is here to help you</div>
 									</div>
 								</div>
 								<div class="custom-heading">
-									<h6 class="pbmit-title">1-235-452-1235</h6>
-									<p>noreply@example.com</p>
+									<h6 class="pbmit-title">021-80675489</h6>
+									<p>cru@rscm.co.id</p>
 								</div>
 							</div>
 						</div>
@@ -99,65 +99,24 @@
 								<div class="pbmit-icon">
 									<i class="pbmit-ophtical-icon pbmit-ophtical-icon-medical-report"></i>
 								</div>
-								<h2 class="pbmit-title">Reserve ophtical clinic slot</h2>
+								<h2 class="pbmit-title">Contact Clinical Research Unit</h2>
 								<div class="pbmit-heading-desc">
-									Call us 24/7 with any emergency or to schedule an appointment & check your health.
+									Send us a message for research inquiries, collaborations, or to learn more about our clinical research programs.
 								</div>
 							</div>
 							<form class="contact-form" method="post" id="contact-form" action="send.php">
 								<div class="row">
-									<div class="col-md-6 col-gl-4">
+									<div class="col-md-6">
 										<input type="text" class="form-control" placeholder="Full Name *" name="name" required>
 									</div>
-									<div class="col-md-6 col-gl-4">
+									<div class="col-md-6">
+										<input type="email" class="form-control" placeholder="Email Address *" name="email" required>
+									</div>
+									<div class="col-md-6">
 										<input type="tel" class="form-control" placeholder="Phone Number" name="phone" required>
 									</div>
-									<div class="col-md-6 col-gl-4">
-										<input class="form-control" type="date" name="date" required>
-									</div>
-									<div class="col-md-6 col-gl-4">
-										<select class="form-select" name="time" required>
-											<option value="">Select Time</option>
-											<option value="9:00 am">9:00 am</option>
-											<option value="9:30 am">9:30 am</option>
-											<option value="10:00 am">10:00 am</option>
-											<option value="10:30 am">10:30 am</option>
-											<option value="11:00 am">11:00 am</option>
-											<option value="11:30 am">11:30 am</option>
-											<option value="12:00 pm">12:00 pm</option>
-											<option value="12:30 pm">12:30 pm</option>
-											<option value="01:00 pm">01:00 pm</option>
-											<option value="01:30 pm">01:30 pm</option>
-											<option value="02:00 pm">02:00 pm</option>
-											<option value="02:30 pm">02:30 pm</option>
-											<option value="03:00 pm">03:00 pm</option>
-											<option value="03:30 pm">03:30 pm</option>
-											<option value="04:00 pm">04:00 pm</option>
-											<option value="04:30 pm">04:30 pm</option>
-											<option value="05:00 pm">05:00 pm</option>
-											<option value="05:30 pm">05:30 pm</option>
-											<option value="06:00 pm">06:00 pm</option>
-											<option value="06:30 pm">06:30 pm</option>
-										</select>
-									</div>
-									<div class="col-md-6 col-gl-4">
-										<select class="form-select" name="treatment" required>
-											<option value="">Select Treatment</option>
-											<option value="Cataract Surgery">Cataract Surgery</option>
-											<option value="Oculoplasty">Oculoplasty</option>
-											<option value="Myopia Control">Myopia Control</option>
-											<option value="Vitreoretinal">Vitreoretinal</option>
-											<option value="Cataract & Refractive">Cataract & Refractive</option>
-										</select>
-									</div>
-									<div class="col-md-6 col-gl-4">
-										<select class="form-select" name="doctor" required>
-											<option value="">Select Doctor</option>
-											<option value="Dr. John Harris">Dr. John Harris</option>
-											<option value="Dr. Myles Evader">Dr. Myles Evader</option>
-											<option value="Dr. Bryson Tiller">Dr. Bryson Tiller</option>
-											<option value="Dr. Jacob Moore">Dr. Jacob Moore</option>
-										</select>
+									<div class="col-md-6">
+										<input type="text" class="form-control" placeholder="Subject" name="subject" required>
 									</div>
 									<div class="col-md-12">
 										<textarea cols="40" rows="10" placeholder="Message" class="form-control" name="message" required></textarea>
@@ -166,8 +125,8 @@
 										<button class="pbmit-btn secondary">
 											<span class="pbmit-button-content-wrapper">
 												<span class="pbmit-button-text-wrap">
-													<span class="pbmit-button-text" data-text="Request An Appointment">
-														<span>Request An Appointment</span>
+													<span class="pbmit-button-text" data-text="Send Message">
+														<span>Send Message</span>
 													</span>
 												</span>
 											</span>
@@ -195,7 +154,7 @@
 			<!-- Iframe -->
 			<section class="contact-iframe-section section-xxl">
 				<div class="container">
-					<iframe src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" title="London Eye, London, United Kingdom" aria-label="London Eye, London, United Kingdom"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4954049808034!2d106.84381767630234!3d-6.198181293789494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f46ca9d4de37%3A0x5fab6bf2c91cd40a!2sEijkman%20Institute%20for%20Molecular%20Biology!5e0!3m2!1sen!2sid!4v1768196089020!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</section>
 			<!-- Iframe End-->

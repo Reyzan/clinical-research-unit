@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\DoctorController;
+use App\Http\Controllers\Frontend\TeamController;
 use App\Http\Controllers\Frontend\ServiceController;
 use App\Http\Controllers\Frontend\AppointmentController;
 use App\Http\Controllers\Frontend\ContactController;
@@ -14,9 +15,9 @@ use App\Http\Controllers\Frontend\PagesController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
-// Doctors
-Route::get('/doctors', [DoctorController::class, 'index'])->name('doctors.index');
-Route::get('/doctors/{doctor}', [DoctorController::class, 'show'])->name('doctors.show');
+// Researchers (Our Teams)
+Route::get('/teams', [TeamController::class, 'index'])->name('teams.index');
+Route::get('/teams/{team}', [TeamController::class, 'show'])->name('teams.show');
 
 // Services
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');

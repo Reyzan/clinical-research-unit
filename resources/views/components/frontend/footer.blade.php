@@ -21,7 +21,6 @@
                         <ul class="menu">
                             <li><a href="{{ route('services.index') }}">Biobank</a></li>
                             <li><a href="{{ route('services.index') }}">Genomic</a></li>
-                            <li><a href="{{ route('services.index') }}">Bacterial Analysis</a></li>
                             <li><a href="{{ route('services.index') }}">Clinical Trial</a></li>
                         </ul>
                     </aside>
@@ -31,7 +30,7 @@
                         <h2 class="widget-title">Quick Links</h2>
                         <ul class="menu">
                             <li><a href="{{ route('about') }}">About Us</a></li>
-                            <li><a href="{{ route('doctors.index') }}">Our Researchers</a></li>
+                            <li><a href="{{ route('teams.index') }}">Our Teams</a></li>
                             <li><a href="#">Research Groups</a></li>
                             <li><a href="{{ route('faq') }}">FAQ</a></li>
                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
