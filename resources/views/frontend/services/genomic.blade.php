@@ -1,5 +1,21 @@
 @extends('layouts.frontend')
+
 @section('title', 'Genomic')
+
+@section('meta_description', 'Advanced genomic sequencing and analysis services at CRU RSCM. Whole genome sequencing, targeted panels, variant analysis, and pharmacogenomics supporting precision medicine research and personalized healthcare in Indonesia.')
+
+@section('meta_keywords', 'genomic sequencing, DNA analysis, genetic testing, whole genome sequencing, targeted sequencing, variant analysis, pharmacogenomics, precision medicine, genetic counseling Indonesia, NGS services')
+
+@section('og_title', 'Advanced Genomic Sequencing Services - Clinical Research Unit RSCM')
+
+@section('og_description', 'Cutting-edge genomic sequencing and analysis capabilities driving precision medicine research. From whole genome sequencing to targeted panels and pharmacogenomics.')
+
+@section('og_image', asset('frontend/images/og/genomic-og.png'))
+
+@section('og_type', 'article')
+
+@section('canonical_url', route('services.show', 'genomic'))
+
 @section('content')
     <x-frontend.page-title title="Genomic" :breadcrumbs="[['title' => 'Genomic']]" />
     <!-- Page Content -->

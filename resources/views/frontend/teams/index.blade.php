@@ -2,6 +2,18 @@
 
 @section('title', 'Our Teams')
 
+@section('meta_description', 'Meet the expert research team at Clinical Research Unit RSCM. Our multidisciplinary scientists, geneticists, and clinicians lead Indonesia\'s precision medicine and genomic research initiatives with over 15 years combined expertise.')
+
+@section('meta_keywords', 'CRU research team, genomic research scientists, precision medicine experts, clinical research team Indonesia, genetic counselor, biobank specialists, RSCM researchers, metabolic disease experts')
+
+@section('og_title', 'Expert Research Team - Clinical Research Unit RSCM')
+
+@section('og_description', 'Meet the multidisciplinary experts driving precision medicine research in Indonesia. Our team combines clinical excellence with cutting-edge genomic science.')
+
+@section('og_image', asset('frontend/images/og/team-og.png'))
+
+@section('canonical_url', route('teams.index'))
+
 @section('content')
 <x-frontend.page-title
     title="Our Teams"
@@ -14,9 +26,9 @@
 			<!-- Our Team Start -->
 			<section class="section-md">
 				<div class="container">
-					<!-- Row 1: 1 Leader (Center) -->
-					<div class="row pbmit-element-posts-wrapper justify-content-center mb-4">
-						<article class="pbmit-team-style-1 col-md-6 col-lg-4">
+					<!-- Row 1: Leadership - Kepala Instalasi & 3 Kepala Sub Instalasi -->
+					<div class="row pbmit-element-posts-wrapper mb-4">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -36,11 +48,7 @@
 								</div>
 							</div>
 						</article>
-					</div>
-
-					<!-- Row 2: 3 Sub-Heads -->
-					<div class="row pbmit-element-posts-wrapper justify-content-center mb-4">
-						<article class="pbmit-team-style-1 col-md-6 col-lg-4">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -60,7 +68,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="pbmit-team-style-1 col-md-6 col-lg-4">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -80,7 +88,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="pbmit-team-style-1 col-md-6 col-lg-4">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -102,9 +110,49 @@
 						</article>
 					</div>
 
-					<!-- Row 3: 5 Staff Members (First Row) -->
-					<div class="row pbmit-element-posts-wrapper justify-content-between mb-4">
-						<article class="pbmit-team-style-1 col-md-4 col-lg-2">
+					<!-- Row 2: Unit Heads & Senior Positions -->
+					<div class="row pbmit-element-posts-wrapper mb-4">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
+							<div class="pbminfotech-post-item">
+								<div class="pbmit-featured-inner">
+									<div class="pbmit-featured-img-wrapper">
+										<div class="pbmit-featured-wrapper">
+											<img src="{{ asset('frontend/images/team/team-01.jpg') }}" class="img-fluid" alt="">
+										</div>
+									</div>
+									<a class="pbmit-link" href="javascript:void(0);" title="Go to dr. Ahmad Yanuar Safri, Sp.S-KENK"></a>
+								</div>
+								<div class="pbminfotech-box-content">
+									<div class="pbmit-box-title-wrap">
+										<h3 class="pbmit-team-title">
+											<a href="javascript:void(0);">dr. Ahmad Yanuar Safri, Sp.S-KENK</a>
+										</h3>
+										<div class="pbminfotech-box-team-position">Kepala Sub Unit Kebijakan dan Administrasi Riset</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
+							<div class="pbminfotech-post-item">
+								<div class="pbmit-featured-inner">
+									<div class="pbmit-featured-img-wrapper">
+										<div class="pbmit-featured-wrapper">
+											<img src="{{ asset('frontend/images/team/team-01.jpg') }}" class="img-fluid" alt="">
+										</div>
+									</div>
+									<a class="pbmit-link" href="javascript:void(0);" title="Go to Siti Rizny Fitriana Saldi, Apt, MSc"></a>
+								</div>
+								<div class="pbminfotech-box-content">
+									<div class="pbmit-box-title-wrap">
+										<h3 class="pbmit-team-title">
+											<a href="javascript:void(0);">Siti Rizny Fitriana Saldi, Apt, MSc</a>
+										</h3>
+										<div class="pbminfotech-box-team-position">Kepala Sub Unit Epidemiologi dan Evidence Based Medicine</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -119,12 +167,12 @@
 										<h3 class="pbmit-team-title">
 											<a href="javascript:void(0);">dr. Widya Eka Nugraha, M.Si.Med</a>
 										</h3>
-										<div class="pbminfotech-box-team-position">Konselor genetik</div>
+										<div class="pbminfotech-box-team-position">Konselor Genetik</div>
 									</div>
 								</div>
 							</div>
 						</article>
-						<article class="pbmit-team-style-1 col-md-4 col-lg-2">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -144,7 +192,11 @@
 								</div>
 							</div>
 						</article>
-						<article class="pbmit-team-style-1 col-md-4 col-lg-2">
+					</div>
+
+					<!-- Row 3: Staff Members -->
+					<div class="row pbmit-element-posts-wrapper mb-4">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -164,7 +216,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="pbmit-team-style-1 col-md-4 col-lg-2">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -184,7 +236,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="pbmit-team-style-1 col-md-4 col-lg-2">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -204,11 +256,7 @@
 								</div>
 							</div>
 						</article>
-					</div>
-
-					<!-- Row 4: 5 Staff Members (Second Row) -->
-					<div class="row pbmit-element-posts-wrapper justify-content-between">
-						<article class="pbmit-team-style-1 col-md-4 col-lg-2">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -228,7 +276,11 @@
 								</div>
 							</div>
 						</article>
-						<article class="pbmit-team-style-1 col-md-4 col-lg-2">
+					</div>
+
+					<!-- Row 4: Staff Members -->
+					<div class="row pbmit-element-posts-wrapper">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -248,7 +300,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="pbmit-team-style-1 col-md-4 col-lg-2">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -268,7 +320,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="pbmit-team-style-1 col-md-4 col-lg-2">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
@@ -288,7 +340,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="pbmit-team-style-1 col-md-4 col-lg-2">
+						<article class="pbmit-team-style-1 col-md-6 col-lg-3">
 							<div class="pbminfotech-post-item">
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">

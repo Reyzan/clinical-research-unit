@@ -1,4 +1,22 @@
-@extends('layouts.frontend') @section('title', 'Biobank') @section('content')
+@extends('layouts.frontend')
+
+@section('title', 'Biobank')
+
+@section('meta_description', 'Professional biobank services at CRU RSCM: sample processing, DNA isolation, long-term storage at -86°C, quality control, and specimen management. Supporting 2,000+ subjects with 40,000+ tubes across multiple specimen types.')
+
+@section('meta_keywords', 'biobank services, sample processing, DNA isolation, specimen storage, cold chain storage, plasma processing, serum separation, buffy coat extraction, research biobank Indonesia, sample management')
+
+@section('og_title', 'Professional Biobank Services - Clinical Research Unit RSCM')
+
+@section('og_description', 'Comprehensive biobank services with state-of-the-art cold storage, professional sample processing, and quality-controlled specimen management supporting clinical research excellence.')
+
+@section('og_image', asset('frontend/images/og/biobank-og.png'))
+
+@section('og_type', 'article')
+
+@section('canonical_url', route('services.show', 'biobank'))
+
+@section('content')
 <x-frontend.page-title title="Biobank" :breadcrumbs="[['title' => 'Biobank']]" />
 
 <!-- Page Content -->

@@ -1,6 +1,18 @@
 @extends('layouts.frontend')
 
-@section('title', ' Contact Us')
+@section('title', 'Contact Us')
+
+@section('meta_description', 'Contact Clinical Research Unit RSCM for research collaboration, biobank services, genomic testing inquiries, or clinical trial partnerships. Located at RSCM Jakarta, Indonesia\'s premier precision medicine hub.')
+
+@section('meta_keywords', 'contact, research collaboration, RSCM address, clinical research partnership, biobank inquiry, genomic services contact, Jakarta clinical research, CRU RSCM location')
+
+@section('og_title', 'Contact Us - Clinical Research Unit RSCM')
+
+@section('og_description', 'Get in touch with CRU RSCM for research collaborations, service inquiries, or partnership opportunities. Indonesia\'s national hub for metabolic disease research.')
+
+@section('og_image', asset('frontend/images/og/contact-og.png'))
+
+@section('canonical_url', route('contact'))
 
 @section('content')
 <x-frontend.page-title

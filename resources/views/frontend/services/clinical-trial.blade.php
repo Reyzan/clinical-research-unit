@@ -2,6 +2,20 @@
 
 @section('title', 'Clinical Trial')
 
+@section('meta_description', 'Professional clinical trial management and coordination services at CRU RSCM. From study design and regulatory compliance to patient recruitment, data management, and quality assurance for medical research excellence.')
+
+@section('meta_keywords', 'clinical trial services, research trial management, clinical study coordination, GCP compliance, patient recruitment, trial monitoring, regulatory affairs, data management, clinical research CRO Indonesia')
+
+@section('og_title', 'Clinical Trial Management Services - Clinical Research Unit RSCM')
+
+@section('og_description', 'Comprehensive clinical trial services ensuring research excellence, regulatory compliance, and ethical patient care throughout the research lifecycle.')
+
+@section('og_image', asset('frontend/images/og/clinical-trial-og.png'))
+
+@section('og_type', 'article')
+
+@section('canonical_url', route('services.show', 'clinical-trial'))
+
 @section('content')
     <x-frontend.page-title title="Clinical Trial" :breadcrumbs="[['title' => 'Clinical Trial']]" />
 

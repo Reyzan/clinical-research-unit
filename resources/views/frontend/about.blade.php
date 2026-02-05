@@ -2,6 +2,18 @@
 
 @section('title', 'About Us')
 
+@section('meta_description', 'Learn about Clinical Research Unit RSCM, Indonesia\'s national hub for metabolic disease research. Discover our vision for personalized healthcare, cutting-edge genomic research, and commitment to ethical precision medicine since 2022.')
+
+@section('meta_keywords', 'about CRU RSCM, clinical research unit history, metabolic disease hub Indonesia, genomic science center, BGSI Indonesia, precision medicine vision, biomedical research ethics, translational research Indonesia')
+
+@section('og_title', 'About Clinical Research Unit RSCM - National Metabolic Disease Hub')
+
+@section('og_description', 'Designated by Indonesia\'s Ministry of Health as the national hub for metabolic disease research. Pioneering precision medicine through genomics, biobank, and clinical innovation.')
+
+@section('og_image', asset('frontend/images/about/pioneering.png'))
+
+@section('canonical_url', route('about'))
+
 @section('content')
     <x-frontend.page-title title="About Us" :breadcrumbs="[['title' => 'About Us']]" />
 
@@ -107,7 +119,7 @@
                                         data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg"
                                         data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0"
                                         style="transform: translate(0%, 12.6433%) scale(1) skew(0deg, 0deg) rotate(0deg);">
-                                        <img src="{{ asset('frontend/images/demo-3/about-eye-glass.png') }}"
+                                        <img src="{{ asset('frontend/images/about/pipette.png') }}"
                                             class="img-fluid" alt="">
                                     </div>
                                 </div>
