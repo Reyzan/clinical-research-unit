@@ -294,6 +294,16 @@ ul.pbmit-timelist-list .pbmit-timetable-hours{
 	left: calc(50% + 20px);
 	right: 10px;
 }
+/* Service Details Slider Navigation */
+.pbmit-service-feature-image .swiper-button-prev{
+	left: 20px;
+	right: auto;
+	transform: rotate(180deg);
+}
+.pbmit-service-feature-image .swiper-button-next{
+	left: auto;
+	right: 20px;
+}
 .why-choose-one-left-area,
 .why-choose-one-right-area{
 	display: flex;
@@ -2771,4 +2781,99 @@ label.error {
     opacity: 0.05;
     pointer-events: none;
     background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #fff 10px, #fff 11px);
+}
+
+/* CV Download Card */
+.pbmit-download-card-wrapper {
+    position: sticky;
+    top: 120px;
+    z-index: 99;
+}
+
+.pbmit-download-card {
+    background-color: #F0FAF9; /* Light cyan/mint color */
+    padding: 40px 30px;
+    border-radius: 20px;
+}
+
+.pbmit-download-card-title {
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--pbmit-global-color);
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.pbmit-download-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pbmit-download-item-card {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.pbmit-download-item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-color: rgba(var(--pbmit-secondary-color-rgb), 0.2);
+}
+
+.pbmit-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--pbmit-global-color);
+    border-radius: 6px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.pbmit-item-icon i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.pbmit-item-info {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.pbmit-item-title {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--pbmit-global-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pbmit-item-action {
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #eee;
+}
+
+.pbmit-item-action a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pbmit-secondary-color);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.pbmit-item-action a:hover {
+    color: var(--pbmit-global-color);
 }

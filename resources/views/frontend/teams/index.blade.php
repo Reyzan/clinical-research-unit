@@ -73,15 +73,15 @@
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
 										<div class="pbmit-featured-wrapper">
-											<img src="{{ asset('frontend/images/team/dr-nina.png') }}" class="img-fluid" alt="">
+											<img src="{{ asset('frontend/images/team/dr-nina-dwi-putri-spasubsiptk-msc.png') }}" class="img-fluid" alt="">
 										</div>
 									</div>
-									<a class="pbmit-link" href="javascript:void(0);" title="Go to dr. Nina Dwi Putri, Sp.A (K)"></a>
+									<a class="pbmit-link" href="{{ route('teams.show', 'dr-nina-dwi-putri-spasubsiptk-msc') }}" title="Go to Dr. Nina Dwi Putri, SpA.SubspIPT(K), MSc"></a>
 								</div>
 								<div class="pbminfotech-box-content">
 									<div class="pbmit-box-title-wrap">
 										<h3 class="pbmit-team-title">
-											<a href="javascript:void(0);">dr. Nina Dwi Putri, Sp.A (K)</a>
+											<a href="{{ route('teams.show', 'dr-nina-dwi-putri-spasubsiptk-msc') }}">Dr. Nina Dwi Putri, SpA.SubspIPT(K), MSc</a>
 										</h3>
 										<div class="pbminfotech-box-team-position">Kepala Sub Instalasi Implementasi Riset Klinis</div>
 									</div>
@@ -93,15 +93,15 @@
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
 										<div class="pbmit-featured-wrapper">
-											<img src="{{ asset('frontend/images/team/dr-selvi.png') }}" class="img-fluid" alt="">
+											<img src="{{ asset('frontend/images/team/dr-selvi-nafisa-shahab-spmk.png') }}" class="img-fluid" alt="">
 										</div>
 									</div>
-									<a class="pbmit-link" href="javascript:void(0);" title="Go to dr. Selvi Nafisa Shahab, Sp.MK"></a>
+									<a class="pbmit-link" href="{{ route('teams.show', 'dr-selvi-nafisa-shahab-spmk') }}" title="Go to Dr. Selvi Nafisa Shahab, Sp.MK"></a>
 								</div>
 								<div class="pbminfotech-box-content">
 									<div class="pbmit-box-title-wrap">
 										<h3 class="pbmit-team-title">
-											<a href="javascript:void(0);">dr. Selvi Nafisa Shahab, Sp.MK</a>
+											<a href="{{ route('teams.show', 'dr-selvi-nafisa-shahab-spmk') }}">Dr. Selvi Nafisa Shahab, Sp.MK</a>
 										</h3>
 										<div class="pbminfotech-box-team-position">Kepala Sub Instalasi Laboratorium Genomic</div>
 									</div>
@@ -201,7 +201,7 @@
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
 										<div class="pbmit-featured-wrapper">
-											<img src="{{ asset('frontend/images/team/team-01.jpg') }}" class="img-fluid" alt="">
+											<img src="{{ asset('frontend/images/team/dr.ekvan.png') }}" class="img-fluid" alt="">
 										</div>
 									</div>
 									<a class="pbmit-link" href="javascript:void(0);" title="Go to dr. Ekvan Danang"></a>
@@ -221,7 +221,7 @@
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
 										<div class="pbmit-featured-wrapper">
-											<img src="{{ asset('frontend/images/team/team-01.jpg') }}" class="img-fluid" alt="">
+											<img src="{{ asset('frontend/images/team/dr.dhayati.png') }}" class="img-fluid" alt="">
 										</div>
 									</div>
 									<a class="pbmit-link" href="javascript:void(0);" title="Go to dr. Dyahati Wahyurini, M.Biomed"></a>
@@ -241,7 +241,7 @@
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
 										<div class="pbmit-featured-wrapper">
-											<img src="{{ asset('frontend/images/team/team-01.jpg') }}" class="img-fluid" alt="">
+											<img src="{{ asset('frontend/images/team/ramiza-jihan.png') }}" class="img-fluid" alt="">
 										</div>
 									</div>
 									<a class="pbmit-link" href="javascript:void(0);" title="Go to Apt. Ramiza Jihan, S.Farm"></a>
@@ -261,7 +261,7 @@
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
 										<div class="pbmit-featured-wrapper">
-											<img src="{{ asset('frontend/images/team/team-01.jpg') }}" class="img-fluid" alt="">
+											<img src="{{ asset('frontend/images/team/fadhli-arif.png') }}" class="img-fluid" alt="">
 										</div>
 									</div>
 									<a class="pbmit-link" href="javascript:void(0);" title="Go to Fadhli Arif Budiman, S.Kom."></a>
@@ -285,7 +285,7 @@
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
 										<div class="pbmit-featured-wrapper">
-											<img src="{{ asset('frontend/images/team/team-01.jpg') }}" class="img-fluid" alt="">
+											<img src="{{ asset('frontend/images/team/mentari-kasih.png') }}" class="img-fluid" alt="">
 										</div>
 									</div>
 									<a class="pbmit-link" href="javascript:void(0);" title="Go to Mentari Kasih, S.Si, M.Si"></a>
@@ -305,7 +305,7 @@
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
 										<div class="pbmit-featured-wrapper">
-											<img src="{{ asset('frontend/images/team/team-01.jpg') }}" class="img-fluid" alt="">
+											<img src="{{ asset('frontend/images/team/harfi-maulana.png') }}" class="img-fluid" alt="">
 										</div>
 									</div>
 									<a class="pbmit-link" href="javascript:void(0);" title="Go to Harfi Maulana, S.Si, M.Si"></a>
@@ -325,7 +325,7 @@
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
 										<div class="pbmit-featured-wrapper">
-											<img src="{{ asset('frontend/images/team/team-01.jpg') }}" class="img-fluid" alt="">
+											<img src="{{ asset('frontend/images/team/Nabilla-zeinia.png') }}" class="img-fluid" alt="">
 										</div>
 									</div>
 									<a class="pbmit-link" href="javascript:void(0);" title="Go to Nabilla Zeinia Sudrajat A.Md.Kes."></a>
@@ -345,7 +345,7 @@
 								<div class="pbmit-featured-inner">
 									<div class="pbmit-featured-img-wrapper">
 										<div class="pbmit-featured-wrapper">
-											<img src="{{ asset('frontend/images/team/team-01.jpg') }}" class="img-fluid" alt="">
+											<img src="{{ asset('frontend/images/team/shahnaz.png') }}" class="img-fluid" alt="">
 										</div>
 									</div>
 									<a class="pbmit-link" href="javascript:void(0);" title="Go to Shahnaz Mutia Dewi, A.Md.Kes."></a>

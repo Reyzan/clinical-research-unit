@@ -93,20 +93,24 @@
                     </div>
                     <div class="col-md-9 service-right-col">
                         <div class="pbmit-service-feature-image">
-                            <div class="swiper-slider" data-autoplay="true" data-loop="true" data-allow-touch="true"
-                                data-arrows="false" data-columns="1" data-margin="0" data-effect="slide" data-speed="150">
+                            <div class="swiper-slider" data-autoplay="false" data-loop="true" data-allow-touch="true"
+                                data-arrows="true" data-columns="1" data-margin="0" data-effect="slide" data-speed="150">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
+                                        <video src="{{ asset('frontend/videos/service/clinical-trials.mp4') }}"
+                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Clinical Trial Video" loop muted autoplay playsinline></video>
+                                    </div>
+                                    <div class="swiper-slide">
                                         <img src="{{ asset('frontend/images/service/clinical-trial-1.png') }}"
-                                            class="img-fluid w-100" alt="Clinical Trial Image 1" />
+                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Clinical Trial Image 1" />
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="{{ asset('frontend/images/service/clinical-trial-2.png') }}"
-                                            class="img-fluid w-100" alt="Clinical Trial Image 2" />
+                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Clinical Trial Image 2" />
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="{{ asset('frontend/images/service/clinical-trial-3.png') }}"
-                                            class="img-fluid w-100" alt="Clinical Trial Image 3" />
+                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Clinical Trial Image 3" />
                                     </div>
                                 </div>
                             </div>
@@ -439,17 +443,8 @@
 
     @push('scripts')
         <script>
-            // Faster autoplay for clinical trial service carousel
-            document.addEventListener('DOMContentLoaded', function() {
-                setTimeout(function() {
-                    const clinicalTrialCarousel = document.querySelector('.service-right-col .swiper-slider');
-                    if (clinicalTrialCarousel && clinicalTrialCarousel.swiper) {
-                        clinicalTrialCarousel.swiper.params.autoplay.delay = 1000;
-                        clinicalTrialCarousel.swiper.autoplay.stop();
-                        clinicalTrialCarousel.swiper.autoplay.start();
-                    }
-                }, 500);
-            });
+            // Manual mode - no autoplay needed
+            // Navigation buttons are enabled via data-arrows="true"
         </script>
     @endpush
 @endsection
