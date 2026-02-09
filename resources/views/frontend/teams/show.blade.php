@@ -71,9 +71,6 @@
 									<div class="pbmit-info-teammember-content">
 										<h4 class="mb-3">Personal Information</h4>
 										<ul class="pbmit-team-info-content pbmit-single-team-info">
-											@if(isset($member->personal_info['phone']))
-												<li><span>Phone Number :</span> {{ $member->personal_info['phone'] }}</li>
-											@endif
 											@if(isset($member->personal_info['email']))
 												<li><span>Email Address :</span> <a href="mailto:{{ $member->personal_info['email'] }}">{{ $member->personal_info['email'] }}</a></li>
 											@endif
