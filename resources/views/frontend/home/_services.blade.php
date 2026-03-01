@@ -29,7 +29,7 @@
                     </a>
                 </div>
             </div>
-            <div class="swiper-slider pbmit-column-four" data-autoplay="false" data-loop="true" data-allow-touch="true"  data-dots="false" data-arrows="true" data-columns="4" data-margin="20" data-effect="slide">				
+            <div class="swiper-slider pbmit-column-three" data-autoplay="false" data-loop="true" data-allow-touch="true"  data-dots="false" data-arrows="true" data-columns="3" data-margin="20" data-effect="slide">				
                 <div class="swiper-wrapper">
                     <!-- Slide1 -->
                     <article class="pbmit-service-style-1 swiper-slide">
@@ -37,7 +37,7 @@
                             <div class="pbmit-box-content-wrap">
                                 <div class="pbmit-featured-img-wrapper">
                                     <div class="pbmit-featured-wrapper">
-                                        <img src="{{ asset('frontend/images/demo-1/service/service-img-01.jpg') }}" class="img-fluid" alt="">
+                                        <img src="{{ asset('frontend/images/service/biobank.png') }}" class="img-fluid" alt="">
                                     </div>
                                 </div>
                                 <a class="pbmit-link" href="{{ route('services.show', 'biobank') }}" title="Go to Biobank"></a>
@@ -73,7 +73,7 @@
                             <div class="pbmit-box-content-wrap">
                                 <div class="pbmit-featured-img-wrapper">
                                     <div class="pbmit-featured-wrapper">
-                                        <img src="{{ asset('frontend/images/demo-1/service/service-img-02.jpg') }}" class="img-fluid" alt="">
+                                        <img src="{{ asset('frontend/images/service/genomic.png') }}" class="img-fluid" alt="">
                                     </div>
                                 </div>
                                 <a class="pbmit-link" href="{{ route('services.show', 'genomic') }}" title="Go to Genomics"></a>
@@ -102,12 +102,12 @@
                         </div>
                     </article>
                     <!-- Slide3 -->
-                    <article class="pbmit-service-style-1 swiper-slide">
+                    {{-- <article class="pbmit-service-style-1 swiper-slide">
                         <div class="pbminfotech-post-item">
                             <div class="pbmit-box-content-wrap">
                                 <div class="pbmit-featured-img-wrapper">
                                     <div class="pbmit-featured-wrapper">
-                                        <img src="{{ asset('frontend/images/demo-1/service/service-img-03.jpg') }}" class="img-fluid" alt="">
+                                        <img src="{{ asset('frontend/images/service/bacterial-analysis.png') }}" class="img-fluid" alt="">
                                     </div>
                                 </div>
                                 <a class="pbmit-link" href="{{ route('services.show', 'bacterial-analysis') }}" title="Go to Bacterial Analysis"></a>
@@ -134,14 +134,14 @@
                                 </div>
                             </div>
                         </div>
-                    </article>
+                    </article> --}}
                     <!-- Slide4 -->
                     <article class="pbmit-service-style-1 swiper-slide">
                         <div class="pbminfotech-post-item">
                             <div class="pbmit-box-content-wrap">
                                 <div class="pbmit-featured-img-wrapper">
                                     <div class="pbmit-featured-wrapper">
-                                        <img src="{{ asset('frontend/images/demo-1/service/service-img-04.jpg') }}" class="img-fluid" alt="">
+                                        <img src="{{ asset('frontend/images/service/clinical-trial.png') }}" class="img-fluid" alt="">
                                     </div>
                                 </div>
                                 <a class="pbmit-link" href="{{ route('services.show', 'clinical-trial') }}" title="Go to Clinical Trial"></a>

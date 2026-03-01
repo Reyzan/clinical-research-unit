@@ -14,11 +14,11 @@
                                 <div class="pbmit-slider-desc">Delivering high-quality and ethical clinical research <br>to advance science and improve patient outcomes.</div>
                             </div>
                             <div class="pbmit-button transform-bottom transform-delay-4">
-                                <a class="pbmit-btn" href="{{ route('doctors.index') }}">
+                                <a class="pbmit-btn" href="{{ route('teams.index') }}">
                                     <span class="pbmit-button-content-wrapper">
                                         <span class="pbmit-button-text-wrap">
-                                            <span class="pbmit-button-text" data-text="Meet Our Researchers">
-                                                <span>Meet Our Researchers</span>
+                                            <span class="pbmit-button-text" data-text="Meet Our Teams">
+                                                <span>Meet Our Teams</span>
                                             </span>
                                         </span>
                                         <span class="pbmit-button-icon">
@@ -53,11 +53,11 @@
                                 <div class="pbmit-slider-desc">We conduct rigorous and ethical clinical research<br>to deliver reliable results and meaningful impact.</div>
                             </div>
                             <div class="pbmit-button transform-bottom transform-delay-4">
-                                <a class="pbmit-btn" href="{{ route('doctors.index') }}">
+                                <a class="pbmit-btn" href="{{ route('teams.index') }}">
                                     <span class="pbmit-button-content-wrapper">
                                         <span class="pbmit-button-text-wrap">
-                                            <span class="pbmit-button-text" data-text="Meet Our Researchers">
-                                                <span>Meet Our Researchers</span>
+                                            <span class="pbmit-button-text" data-text="Meet Our Teams">
+                                                <span>Meet Our Teams</span>
                                             </span>
                                         </span>
                                         <span class="pbmit-button-icon">

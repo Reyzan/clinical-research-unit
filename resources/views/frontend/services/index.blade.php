@@ -2,6 +2,18 @@
 
 @section('title', 'Services')
 
+@section('meta_description', 'Explore Clinical Research Unit RSCM services: comprehensive biobank processing, advanced genomic sequencing, clinical trial management, and precision medicine consultations. Supporting Indonesian healthcare innovation and research excellence.')
+
+@section('meta_keywords', 'clinical research services, biobank services Indonesia, genomic sequencing, DNA isolation, clinical trial services, precision medicine consultation, research sample storage, genetic testing Indonesia, pharmacogenomics')
+
+@section('og_title', 'Research Services - Clinical Research Unit RSCM')
+
+@section('og_description', 'Professional biobank, genomic sequencing, and clinical trial services supporting Indonesian healthcare research and precision medicine advancement.')
+
+@section('og_image', asset('frontend/images/og/services-og.png'))
+
+@section('canonical_url', route('services.index'))
+
 @section('content')
 <x-frontend.page-title
     title="Services"

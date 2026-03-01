@@ -10,9 +10,6 @@
                             <img src="{{ asset('frontend/images/logo/logo-cru.png') }}" class="img-fluid pbmit-logo-img" alt="{{ config('app.name') }}">
                         </div>
                         <p class="mb-0">A nationally mandated clinical research hub delivering high-quality and ethical research to advance science and improve patient outcomes.</p>
-                        <div class="text-center">
-                            <img src="{{ asset('frontend/images/footer-img-01.png') }}" class="img-fluid" alt="">
-                        </div>
                     </aside>
                 </div>
                 <div class="pbmit-footer-widget-col-2 col-md-4">
@@ -21,7 +18,6 @@
                         <ul class="menu">
                             <li><a href="{{ route('services.index') }}">Biobank</a></li>
                             <li><a href="{{ route('services.index') }}">Genomic</a></li>
-                            <li><a href="{{ route('services.index') }}">Bacterial Analysis</a></li>
                             <li><a href="{{ route('services.index') }}">Clinical Trial</a></li>
                         </ul>
                     </aside>
@@ -31,7 +27,7 @@
                         <h2 class="widget-title">Quick Links</h2>
                         <ul class="menu">
                             <li><a href="{{ route('about') }}">About Us</a></li>
-                            <li><a href="{{ route('doctors.index') }}">Our Researchers</a></li>
+                            <li><a href="{{ route('teams.index') }}">Our Teams</a></li>
                             <li><a href="#">Research Groups</a></li>
                             <li><a href="{{ route('faq') }}">FAQ</a></li>
                             <li><a href="{{ route('contact') }}">Contact Us</a></li>

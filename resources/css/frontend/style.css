@@ -294,6 +294,16 @@ ul.pbmit-timelist-list .pbmit-timetable-hours{
 	left: calc(50% + 20px);
 	right: 10px;
 }
+/* Service Details Slider Navigation */
+.pbmit-service-feature-image .swiper-button-prev{
+	left: 20px;
+	right: auto;
+	transform: rotate(180deg);
+}
+.pbmit-service-feature-image .swiper-button-next{
+	left: auto;
+	right: 20px;
+}
 .why-choose-one-left-area,
 .why-choose-one-right-area{
 	display: flex;
@@ -344,8 +354,6 @@ ul.pbmit-timelist-list .pbmit-timetable-hours{
 }
 .why-choose-one-center-area .girl-circle-img{
 	position: absolute;
-	left: 75px;
-	bottom: 20px;
 }
 .why-choose-one-center-area .girl-circle-bg{
 	background-color: #D6EEFF;
@@ -540,7 +548,7 @@ ul.pbmit-timelist-list .pbmit-timetable-hours{
 	margin-bottom: 0;
 }
 .portfolio-one-heading .pbmit-heading-subheading .pbmit-title{
-	font-size: 40px;
+	font-size: 32px;
 	line-height: 46px;
 }
 .pbmit-blog-group-left{
@@ -670,7 +678,7 @@ ul.pbmit-timelist-list .pbmit-timetable-hours{
 	position: absolute;
 	width: auto;
 	max-width: 100%;
-	right: 10%;
+	right: 1%;
 	top: -8%;
 	z-index: 1;
 }
@@ -1430,7 +1438,7 @@ section:has(.client-two-area){
 	border: 1px solid rgba(var(--pbmit-blackish-color-rgb),.1);
 }
 .service-details .pbmit-entry-content .list-group-wrap{
-	background-image: url(../images/service/service-single-02.jpg);
+	background-image: url(../../../public/frontend/images/service/sub-biobank.png);
 	background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2643,3 +2651,229 @@ label.error {
 }
 /** 08 - Element Page **/
 
+
+/*----------------------------------------*/
+/*  09 - Genomic Section
+/*----------------------------------------*/
+
+/* Horizontal Nav Pills Style */
+.custom-genomic-nav-container {
+    background-color: #fff;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+.custom-genomic-nav-pills .nav-link {
+    color: var(--pbmit-global-color, #555);
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+.custom-genomic-nav-pills .nav-link.active {
+    background-color: var(--pbmit-secondary-color, #004975);
+    color: #fff;
+}
+/* Content Card Style */
+.genomic-content-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.genomic-image-col {
+    min-height: 450px;
+    position: relative;
+}
+.genomic-image-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.genomic-info-col {
+    background-color: var(--pbmit-secondary-color, #0f4c75);
+    color: #fff;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.genomic-subtitle {
+    color: #e6af5d; /* Orange/Gold accent */
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.genomic-subtitle::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #e6af5d;
+    border-radius: 50%;
+    position: relative;
+}
+.genomic-subtitle::after {
+    /* Inner dot for the circle */
+    content: '';
+    position: absolute;
+    left: 65px;
+    width: 8px;
+    height: 8px;
+    background-color: #e6af5d;
+    border-radius: 50%;
+}
+.genomic-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: #fff;
+}
+.genomic-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+.genomic-list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.genomic-list-icon {
+    min-width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: var(--pbmit-secondary-color, #0f4c75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    margin-top: 3px;
+    font-size: 12px;
+}
+.genomic-list-text {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+/* Decorative background geometric lines */
+.genomic-info-bg-decor {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    opacity: 0.05;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #fff 10px, #fff 11px);
+}
+
+/* CV Download Card */
+.pbmit-download-card-wrapper {
+    position: sticky;
+    top: 120px;
+    z-index: 99;
+}
+
+.pbmit-download-card {
+    background-color: #F0FAF9; /* Light cyan/mint color */
+    padding: 40px 30px;
+    border-radius: 20px;
+}
+
+.pbmit-download-card-title {
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--pbmit-global-color);
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.pbmit-download-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pbmit-download-item-card {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.pbmit-download-item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-color: rgba(var(--pbmit-secondary-color-rgb), 0.2);
+}
+
+.pbmit-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--pbmit-global-color);
+    border-radius: 6px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.pbmit-item-icon i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.pbmit-item-info {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.pbmit-item-title {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--pbmit-global-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pbmit-item-action {
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #eee;
+}
+
+.pbmit-item-action a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pbmit-secondary-color);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.pbmit-item-action a:hover {
+    color: var(--pbmit-global-color);
+}

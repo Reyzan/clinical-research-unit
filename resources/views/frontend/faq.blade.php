@@ -1,6 +1,18 @@
 @extends('layouts.frontend')
 
-@section('title', 'Faq')
+@section('title', 'FAQ')
+
+@section('meta_description', 'Frequently asked questions about Clinical Research Unit RSCM services, biobank procedures, genomic testing, clinical trials, sample storage, and precision medicine research. Get answers to common inquiries.')
+
+@section('meta_keywords', 'FAQ, biobank questions, clinical trial information, genomic testing FAQ, sample storage questions, precision medicine FAQ, research participation, genetic testing information')
+
+@section('og_title', 'Frequently Asked Questions - Clinical Research Unit RSCM')
+
+@section('og_description', 'Common questions about CRU RSCM\'s biobank services, genomic testing, clinical trials, and precision medicine research programs answered by our experts.')
+
+@section('og_image', asset('frontend/images/og/faq-og.png'))
+
+@section('canonical_url', route('faq'))
 
 @section('content')
 <x-frontend.page-title

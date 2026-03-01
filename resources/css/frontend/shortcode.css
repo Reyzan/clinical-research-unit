@@ -2261,6 +2261,11 @@
 /*  02 - Team Member
 /*----------------------------------------*/
 /** Style 1 **/
+.pbmit-team-style-1 {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
 .pbmit-team-style-1 .pbmit-featured-wrapper img {
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
@@ -2270,6 +2275,9 @@
 	border-radius: 20px;
 	background-color: var(--pbmit-white-bg-color);
 	border: 1px solid rgba(var(--pbmit-blackish-color-rgb), 0.1);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 .pbmit-team-style-1 .pbmit-featured-inner {
 	position: relative;
@@ -2296,8 +2304,6 @@
 }
 .pbmit-team-style-1 .pbmit-box-title-wrap {
 	padding-bottom: 20px;
-	margin-bottom: 20px;
-	border-bottom: 1px solid rgba(var(--pbmit-blackish-color-rgb), 0.1);
 }
 .pbmit-team-style-1 .pbmit-team-title {
 	font-size: 24px;

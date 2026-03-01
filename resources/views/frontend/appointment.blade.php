@@ -2,6 +2,18 @@
 
 @section('title', 'Appointment')
 
+@section('meta_description', 'Schedule an appointment with Clinical Research Unit RSCM for genetic counseling, precision medicine consultation, or research collaboration. Expert guidance for your genomic health and research needs.')
+
+@section('meta_keywords', 'appointment, genetic counseling, consultation, precision medicine appointment, research collaboration, genomic consultation, biobank inquiry, clinical trial information')
+
+@section('og_title', 'Schedule Appointment - Clinical Research Unit RSCM')
+
+@section('og_description', 'Book your consultation with CRU RSCM experts. Genetic counseling, precision medicine guidance, and research collaboration appointments available.')
+
+@section('og_image', asset('frontend/images/og/appointment-og.png'))
+
+@section('canonical_url', route('appointment'))
+
 @section('content')
 <x-frontend.page-title
     title="Appointment"
