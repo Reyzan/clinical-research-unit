@@ -61,11 +61,11 @@
                                 <div class="textwidget">
                                     <div class="pbmit-download">
                                         <div class="pbmit-item-download">
-                                            <a href="#" target="_blank" rel="noopener">
+                                            <a href="{{ asset('frontend/documents/penawaran-kerjasama.pdf') }}" target="_blank" rel="noopener">
                                                 <div class="pbmit-download-content">
                                                     <div class="pbmit-download-wrap">
-                                                        <i class="pbmit-base-icon-doc-file"></i>
-                                                        <h3 class="pbmit-download-title">CRU Capability Deck</h3>
+                                                        <i class="pbmit-base-icon-pdf-file"></i>
+                                                        <h3 class="pbmit-download-title">Penawaran Kerjasama</h3>
                                                     </div>
                                                     <span class="pbmit-download-item">
                                                         <i class="pbmit-download-icon pbmit-base-icon-download"></i>
@@ -74,11 +74,11 @@
                                             </a>
                                         </div>
                                         <div class="pbmit-item-download">
-                                            <a href="#" target="_blank" rel="noopener">
+                                            <a href="{{ asset('frontend/documents/panduan-kerjasama.pdf') }}" target="_blank" rel="noopener">
                                                 <div class="pbmit-download-content">
                                                     <div class="pbmit-download-wrap">
                                                         <i class="pbmit-base-icon-pdf-file"></i>
-                                                        <h3 class="pbmit-download-title">Study Startup Checklist</h3>
+                                                        <h3 class="pbmit-download-title">Panduan Kerjasama</h3>
                                                     </div>
                                                     <span class="pbmit-download-item">
                                                         <i class="pbmit-download-icon pbmit-base-icon-download"></i>
@@ -260,7 +260,7 @@
                             <div class="row mt-5 align-items-center">
                                 <div class="col-lg-5">
                                     <img class="img-fluid w-100"
-                                        src="{{ asset('frontend/images/clinical-trial/clinical-trial-ecosystem.png') }}"
+                                        src="{{ asset('frontend/images/service/clinical-trial-ecosystem.png') }}"
                                         alt="Clinical Trial Ecosystem: Database, Trial, Facility">
                                 </div>
 

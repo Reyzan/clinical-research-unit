@@ -19,6 +19,6 @@
     @include('frontend.home._about')
     @include('frontend.home._services')
     @include('frontend.home._why-choose-us')
-    @include('frontend.home._research-group')
+    {{-- @include('frontend.home._research-group') --}}
     @include('frontend.home._blog')
 @endsection

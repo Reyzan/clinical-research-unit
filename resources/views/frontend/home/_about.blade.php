@@ -11,7 +11,7 @@
                     <div class="about-img-bg">
                         <img src="{{ asset('frontend/images/about/about-cru.png') }}" class="rounded-20 img-fluid" alt="">
                     </div>
-                    <div class="tween-effect-wrap">
+                    {{-- <div class="tween-effect-wrap">
                         <div class="pbmit-ele-tween-effect pbmit-tween-image-text pbmit-tween-effect-style-2">
                             <div class="pbmit-tween-effect" data-x-start="0" data-x-end="0" data-y-start="0" data-y-end="0" data-scale-x-start="0.4" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
                                 <div class="pbmit-tween-effect-text"></div>
@@ -24,7 +24,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-md-6 full-width-1200">

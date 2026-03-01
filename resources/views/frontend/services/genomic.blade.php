@@ -44,25 +44,25 @@
                                         <div class="pbmit-ads-icon">
                                             <i class="pbmit-base-icon-phone-1"></i>
                                         </div>
-                                        <h4 class="pbmit-ads-heading">Looking for trusted<br>eye care?</h4>
-                                        <span class="pbmit-ads-decs">Schedule an appointment with our specialists for eye
-                                            exams, vision correction and treatments.</span>
+                                        <h4 class="pbmit-ads-heading">Interested in<br>genomic testing?</h4>
+                                        <span class="pbmit-ads-decs">Explore how precision medicine and genetic analysis can support
+                                            your research or clinical program. Talk to our genomics team.</span>
                                         <h3 class="pbmit-ads-call">
-                                            <a href="tel:+0(123)456-789">+0(123)456-789</a>
+                                            <a href="{{ route('contact') }}">Contact Genomics Team</a>
                                         </h3>
                                     </div>
                                 </div>
                             </aside>
                             <aside class="widget pbmit-download-info">
-                                <h2 class="widget-title">Clinic profile</h2>
+                                <h2 class="widget-title">Downloads</h2>
                                 <div class="textwidget">
                                     <div class="pbmit-download">
                                         <div class="pbmit-item-download">
-                                            <a href="#" target="_blank" rel="noopener">
+                                            <a href="{{ asset('frontend/documents/penawaran-kerjasama.pdf') }}" target="_blank" rel="noopener">
                                                 <div class="pbmit-download-content">
                                                     <div class="pbmit-download-wrap">
-                                                        <i class="pbmit-base-icon-doc-file"></i>
-                                                        <h3 class="pbmit-download-title">Policy Brochures</h3>
+                                                        <i class="pbmit-base-icon-pdf-file"></i>
+                                                        <h3 class="pbmit-download-title">Penawaran Kerjasama</h3>
                                                     </div>
                                                     <span class="pbmit-download-item">
                                                         <i class="pbmit-download-icon pbmit-base-icon-download"></i>
@@ -71,11 +71,11 @@
                                             </a>
                                         </div>
                                         <div class="pbmit-item-download">
-                                            <a href="#" target="_blank" rel="noopener">
+                                            <a href="{{ asset('frontend/documents/panduan-kerjasama.pdf') }}" target="_blank" rel="noopener">
                                                 <div class="pbmit-download-content">
                                                     <div class="pbmit-download-wrap">
                                                         <i class="pbmit-base-icon-pdf-file"></i>
-                                                        <h3 class="pbmit-download-title">Terms & Conditions</h3>
+                                                        <h3 class="pbmit-download-title">Panduan Kerjasama</h3>
                                                     </div>
                                                     <span class="pbmit-download-item">
                                                         <i class="pbmit-download-icon pbmit-base-icon-download"></i>

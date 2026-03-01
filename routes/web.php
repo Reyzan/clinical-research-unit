@@ -10,6 +10,7 @@ use App\Http\Controllers\Frontend\AppointmentController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\FaqController;
 use App\Http\Controllers\Frontend\PagesController;
+use App\Http\Controllers\Frontend\NewsController;
 
 // Frontend Routes (use Bootstrap bundle)
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -22,6 +23,10 @@ Route::get('/teams/{team}', [TeamController::class, 'show'])->name('teams.show')
 // Services
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
+
+// News
+Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+Route::get('/news/{slug}', [NewsController::class, 'show'])->name('news.show');
 
 // Appointment
 Route::get('/appointment', [AppointmentController::class, 'create'])->name('appointment');

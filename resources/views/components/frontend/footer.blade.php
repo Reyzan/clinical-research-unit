@@ -10,9 +10,6 @@
                             <img src="{{ asset('frontend/images/logo/logo-cru.png') }}" class="img-fluid pbmit-logo-img" alt="{{ config('app.name') }}">
                         </div>
                         <p class="mb-0">A nationally mandated clinical research hub delivering high-quality and ethical research to advance science and improve patient outcomes.</p>
-                        <div class="text-center">
-                            <img src="{{ asset('frontend/images/footer-img-01.png') }}" class="img-fluid" alt="">
-                        </div>
                     </aside>
                 </div>
                 <div class="pbmit-footer-widget-col-2 col-md-4">

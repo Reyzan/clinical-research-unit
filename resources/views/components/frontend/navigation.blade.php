@@ -45,7 +45,7 @@
                                         <li><a href="{{ route('services.show', 'clinical-trial') }}">Clinical Trials</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Research Groups</a></li>
+                                {{-- <li><a href="#">Research Groups</a></li> --}}
                             </ul>
                         </li>
                         <li class="{{ request()->routeIs('contact') ? 'active' : '' }}">

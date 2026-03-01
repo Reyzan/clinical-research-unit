@@ -678,7 +678,7 @@ ul.pbmit-timelist-list .pbmit-timetable-hours{
 	position: absolute;
 	width: auto;
 	max-width: 100%;
-	right: 10%;
+	right: 1%;
 	top: -8%;
 	z-index: 1;
 }
