@@ -42,10 +42,10 @@ class TeamController extends Controller
     {
         return [
             'dr-dicky-l-tahapary-sppd-kemd-phd' => [
-                'name' => 'Dr. Dicky L. Tahapary, SpPD-KEMD, PhD',
+                'name' => 'dr. Dicky Levenus Tahapary, Sp.PD-KEMD, PhD, FINASIM',
                 'title' => 'Head of Clinical Research Unit',
-                'subtitle' => 'Endocrinology & Metabolism Consultant, Associate Professor',
-                'bio' => 'As Head of the Clinical Research Unit at RSCM, Dr. Tahapary leads precision medicine initiatives with a focus on metabolic disease research and genomic studies. With over 15 years of experience in endocrinology and diabetes research, he serves as Principal Investigator for the Metabolic Research Project at IMERI-FKUI, developing innovative diagnostic tools and lifestyle management solutions for type 2 diabetes in Indonesia.',
+                'subtitle' => 'Internal Medicine Specialist | Ph.D. in Immunoepidemiology | Metabolic Disease Researcher (Diabetes, Obesity & Immunometabolism',
+                'bio' => 'dr. Dicky L Tahapary an Internal Medicine Specialist and Academician dedicated to advancing the management of diabetes, obesity, and metabolic syndrome. With a Ph.D. in Immunoepidemiology from Leiden University and clinical training from Universitas Indonesia, my work bridges the gap between complex research and evidence-based patient care. As a lead researcher, his spearhead national and international studies on insulin resistance, gut microbiota, and inflammation. His commitment to innovation has led to multiple Intellectual Property (IPR) achievements in diabetes education and management, alongside numerous publications in high-impact scientific journals. He is passionate about transforming metabolic healthcare in Indonesia through data-driven insights and interdisciplinary collaboration.',
                 'image' => asset('frontend/images/team/dr-dicky-l-tahapary-sppd-kemd-phd.png'),
                 'personal_info' => [
                     'email' => 'dicky.tahapary@ui.ac.id',
@@ -147,10 +147,10 @@ class TeamController extends Controller
             ],
 
             'dr-robert-sinto-sppd-kpti' => [
-                'name' => 'Dr. Robert Sinto, SpPD, K-PTI, DPhil',
+                'name' => 'dr. Robert Sinto, SpPD, K-PTI, DPhil',
                 'title' => 'Head of Clinical Research Planning Sub-Unit',
-                'subtitle' => 'Infectious Disease & Tropical Medicine Consultant, WHO Advisor',
-                'bio' => 'As Head of the Clinical Research Planning Sub-Unit at CRU RSCM, Dr. Sinto leads the strategic planning and design of clinical research protocols, with particular expertise in infectious diseases and tropical medicine. His role encompasses developing research frameworks, ensuring compliance with international standards, and fostering collaborations with global health organizations. As a member of the WHO Technical Advisory Group on AWaRe (Access, Watch, Reserve classification of antibiotics), he contributes to global antibiotic stewardship policies.',
+                'subtitle' => 'Infectious Disease Specialist & Global Health Researcher',
+                'bio' => 'dr. Robert Sinto, SpPD, K-PTI, DPhil is a Tropical and Infectious Disease Consultant at Universitas Indonesia - RSCM with a DPhil in Clinical Medicine from the University of Oxford. As a leading researcher, his work focuses on Antimicrobial Stewardship (AMS), diagnostic innovations for sepsis, and tropical medicine, with his expertise recognized globally through his appointment to the WHO Technical Advisory Group on AWaRe (2025–2027). His research is extensively published in high-impact journals such as The Journal of Infection and PLOS One. Beyond his clinical and academic roles, dr. Robert is dedicated to combating Antimicrobial Resistance (AMR) by bridging advanced genomic and clinical research into scalable public health solutions.',
                 'image' => asset('frontend/images/team/dr-robert-sinto-sppd-kpti.png'),
                 'personal_info' => [
                     'email' => 'robert.sinto@ui.ac.id',
@@ -258,10 +258,10 @@ class TeamController extends Controller
             ],
 
             'dr-selvi-nafisa-shahab-spmk' => [
-                'name' => 'Dr. Selvi Nafisa Shahab, Sp.MK',
+                'name' => 'dr. Selvi Nafisa Shahab, Sp.MK',
                 'title' => 'Head of Genomic Laboratory (Clinical Research Unit)',
-                'subtitle' => 'Clinical Microbiologist, PhD Candidate',
-                'bio' => 'A clinical microbiologist and PhD candidate with a strong background in bacterial genomics and antimicrobial resistance, currently serving as the head of a genomics laboratory. Equipped with hands-on experience in routine next-generation sequencing for human and pathogen applications, genomic data interpretation and the integration of the sequencing results into clinical diagnostics, outbreak investigations and public health surveillance, with a strong commitment to advancing infectious disease diagnostics and genomic services.',
+                'subtitle' => 'Clinical Microbiologist & Researcher: Genomics & Antimicrobial Resistance',
+                'bio' => 'dr. Selvi Nafisa Shahab, SpMK is a Clinical Microbiologist and Ph.D. candidate at Erasmus Medical Center, Netherlands, specializing in molecular microbiology and genomics (p. 1). As the Head of the Genomic Laboratory at Dr. Cipto Mangunkusumo Hospital, she leads translational research and genomic diagnosis, with a primary focus on surveillance methods for antimicrobial-resistant bacteria (p. 2). Her work, which includes developing cutting-edge detection for carbapenem-resistant organisms, has been published in international journals such as Antibiotics and Annals of Clinical Microbiology and Antimicrobials (pp. 1-2). An award-winning researcher and delegate for the G20 AMR Side Event, she is dedicated to advancing precision medicine through innovative genomic services (p. 2).',
                 'image' => asset('frontend/images/team/dr-selvi-nafisa-shahab-spmk.png'),
                 'personal_info' => [
                     'email' => 'selvishahab@rscm.co.id',
@@ -376,10 +376,10 @@ class TeamController extends Controller
             ],
 
             'dr-nina-dwi-putri-spasubsiptk-msc' => [
-                'name' => 'Dr. Nina Dwi Putri, SpA.SubspIPT(K), MSc',
+                'name' => 'dr. Nina Dwi Putri, Sp.A(K), MSc(TropPaed)',
                 'title' => 'Field Coordinator of Pediatric Infectious Disease Clinical Research Unit',
-                'subtitle' => 'Pediatric Infectious Disease Consultant, PhD Candidate',
-                'bio' => 'As Head of the Clinical Research Implementation Sub-Unit at CRU RSCM, Dr. Nina leads the operational execution of clinical trials and research protocols, ensuring high-quality implementation standards. She oversees pediatric infectious disease research initiatives, coordinates multi-center clinical trials, and manages research projects funded by international organizations. Her role focuses on translating research designs into actionable protocols while maintaining compliance with ethical and regulatory requirements.',
+                'subtitle' => 'Pediatric Infectious Disease Consultant | MSc Tropical Medicine (UK) | Researcher in Dengue, CMV & Zika | OPAT Pioneer in Indonesia',
+                'bio' => 'dr. Nina Dwi Putri is a Pediatric Infectious and Tropical Disease Consultant with an MSc in Tropical Medicine from the Liverpool School of Tropical Medicine, UK (p. 1). As an active researcher, her work focuses on Dengue virus genome analysis, congenital infections (CMV and Zika), and meningococcal disease surveillance in the Asia-Pacific region (pp. 3-4). Her research has been widely published in prestigious international journals, including The Journal of Infection and PLoS Neglected Tropical Diseases (pp. 3-4). Beyond clinical research, dr. Nina pioneered Indonesia\'s first Pediatric Outpatient Parenteral Antibiotic Therapy (OPAT) clinic, bridging the gap between innovative research and advanced patient care (p. 3)',
                 'image' => asset('frontend/images/team/dr-nina-dwi-putri-spasubsiptk-msc.png'),
                 'personal_info' => [
                     'email' => 'ninadwip@gmail.com, nina.dwi@ikafkui.net',
@@ -514,8 +514,8 @@ class TeamController extends Controller
             'dr-ahmad-yanuar-safri-sps-kenk' => [
                 'name' => 'Dr. Ahmad Yanuar Safri, SpS(K)-ENK',
                 'title' => 'Head of Research Policy and Administration Sub-Unit',
-                'subtitle' => 'Neurologist, Neurophysiology Specialist',
-                'bio' => 'As Head of the Research Policy and Administration Sub-Unit at CRU RSCM, Dr. Safri oversees research governance, policy development, and administrative coordination for clinical research activities. With over 10 years of experience in clinical neurophysiology, he brings expertise in neuromuscular and peripheral nerve disorders to the research planning process. His role ensures that all research activities comply with institutional policies, ethical standards, and regulatory requirements while maintaining operational efficiency.',
+                'subtitle' => 'Clinical Neurophysiology & Neuromuscular Consultant',
+                'bio' => 'dr. Ahmad Yanuar S, Sp.N, Subps.E.N.K (K) is a Neurology Consultant specializing in Clinical Neurophysiology and Neuromuscular Disorders with a Doctoral degree in Biomedical Sciences from the Universitas Indonesia. His professional development includes clinical neurophysiology and intraoperative monitoring at Duke University, as well as laboratory experience in Guillain-Barré Syndrome at the Yong Loo Lin School of Medicine, National University of Singapore. With a strong academic background, dr.Ahmad is actively engaged in clinical and translational research in neurophysiology and neuromuscular disorders, contributing to evidence-based practice and the advancement of ethical, high-quality clinical research in Indonesia.',
                 'image' => asset('frontend/images/team/dr-ahmad-yanuar-safri-sps-kenk.png'),
                 'personal_info' => [
                     'email' => 'ahmad.yanuar@ui.ac.id',
@@ -619,8 +619,8 @@ class TeamController extends Controller
             'siti-rizny-fitriana-saldi-apt-msc' => [
                 'name' => 'Siti Rizny Fitriana Saldi, Apt, MSc',
                 'title' => 'Head of Epidemiology and Evidence-Based Medicine Sub-Unit',
-                'subtitle' => 'Pharmacist, Clinical Epidemiologist',
-                'bio' => 'As Head of the Epidemiology and Evidence-Based Medicine Sub-Unit at CRU RSCM, Siti Rizny leads the application of evidence-based methodologies to clinical research design and implementation. With expertise in pharmacoepidemiology, health technology assessment, and systematic reviews, she ensures that research protocols are grounded in current best evidence and methodologically rigorous. Her role encompasses supporting investigators with study design, conducting systematic literature reviews, and applying epidemiological principles to strengthen the scientific quality of research outputs.',
+                'subtitle' => 'Clinical Epidemiologist & Evidence-Based Medicine Specialist',
+                'bio' => 'Siti Rizny Fitriana Saldi is a distinguished clinical epidemiologist and researcher specializing in Evidence-Based Medicine (EBM) and Health Technology Assessment (HTA) (p. 1). As the Head of the Clinical Epidemiology and EBM Sub-Unit at RSCM’s Clinical Research Unit (CRU), she leads high-impact evidence synthesis and clinical policy evaluations (p. 1). Her extensive research portfolio includes over 30 peer-reviewed publications covering diverse fields such as geriatric care, infectious diseases (COVID-19 and Dengue), and health economic modeling for oncology and chronic diseases (pp. 2-3). With an advanced academic background from Utrecht University and ITB, she bridges the gap between rigorous epidemiological methodology and practical clinical application, serving as a key educator for medical researchers at Universitas Indonesia (pp. 1, 4)',
                 'image' => asset('frontend/images/team/siti-rizny-fitriana-saldi-apt-msc.png'),
                 'personal_info' => [
                     'email' => 'siti.rizny@ui.ac.id',
