@@ -5,7 +5,7 @@
     $memberName = $member->name ?? 'Team Member';
     $memberTitle = $member->title ?? 'Researcher';
     $memberBio = $member->bio ?? 'Expert researcher at Clinical Research Unit RSCM';
-    $memberImage = $member->image ?? asset('frontend/images/team/team-01.jpg');
+    $memberImage = $member->image_url;
 @endphp
 
 @section('title', $memberName . ' - ' . $memberTitle)
@@ -67,24 +67,24 @@
 						<div class="row">
 							<div class="col-md-8 full-width-1200">
 								<div class="pbmit-team-info-left">
-									@if(isset($member->personal_info))
+									@if($member->email || $member->location || $member->nationality || $member->languages || $member->speciality)
 									<div class="pbmit-info-teammember-content">
 										<h4 class="mb-3">Personal Information</h4>
 										<ul class="pbmit-team-info-content pbmit-single-team-info">
-											@if(isset($member->personal_info['email']))
-												<li><span>Email Address :</span> <a href="mailto:{{ $member->personal_info['email'] }}">{{ $member->personal_info['email'] }}</a></li>
+											@if($member->email)
+												<li><span>Email Address :</span> <a href="mailto:{{ $member->email }}">{{ $member->email }}</a></li>
 											@endif
-											@if(isset($member->personal_info['location']))
-												<li><span>Location :</span> {{ $member->personal_info['location'] }}</li>
+											@if($member->location)
+												<li><span>Location :</span> {{ $member->location }}</li>
 											@endif
-											@if(isset($member->personal_info['nationality']))
-												<li><span>Nationality :</span> {{ $member->personal_info['nationality'] }}</li>
+											@if($member->nationality)
+												<li><span>Nationality :</span> {{ $member->nationality }}</li>
 											@endif
-											@if(isset($member->personal_info['languages']))
-												<li><span>Languages :</span> {{ $member->personal_info['languages'] }}</li>
+											@if($member->languages)
+												<li><span>Languages :</span> {{ $member->languages }}</li>
 											@endif
-											@if(isset($member->personal_info['speciality']))
-												<li><span>Speciality :</span> {{ $member->personal_info['speciality'] }}</li>
+											@if($member->speciality)
+												<li><span>Speciality :</span> {{ $member->speciality }}</li>
 											@endif
 										</ul>
 									</div>
