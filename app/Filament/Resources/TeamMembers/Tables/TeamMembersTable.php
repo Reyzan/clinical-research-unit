@@ -23,8 +23,8 @@ class TeamMembersTable
             ->columns([
                 ImageColumn::make('image')
                     ->circular()
-                    ->size(60)
-                    ->defaultImageUrl(url('/images/placeholder.png')),
+                    ->imageSize(60)
+                    ->getStateUsing(fn ($record) => $record->image_url),
 
                 TextColumn::make('name')
                     ->searchable()
