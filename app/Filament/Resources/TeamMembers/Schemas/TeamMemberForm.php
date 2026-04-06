@@ -55,7 +55,7 @@ class TeamMemberForm
                         ->disk('public')
                         ->directory('frontend/images/team')
                         ->getUploadedFileNameForStorageUsing(
-                            fn ($file, $get) => ($get('slug') ?: Str::slug($get('name'))) . '.' . $file->guessExtension()
+                            fn ($file, $get) => (Str::slug(trim($get('slug'))) ?: Str::slug(trim($get('name'))) ?: 'team-' . time()) . '.' . $file->guessExtension()
                         )
                         ->imageEditor()
                         ->imageEditorAspectRatios(['1:1', '4:3'])
@@ -67,7 +67,7 @@ class TeamMemberForm
                         ->disk('public')
                         ->directory('downloads/cv')
                         ->getUploadedFileNameForStorageUsing(
-                            fn ($file, $get) => ($get('slug') ?: Str::slug($get('name'))) . '-cv.' . $file->guessExtension()
+                            fn ($file, $get) => (Str::slug(trim($get('slug'))) ?: Str::slug(trim($get('name'))) ?: 'team-' . time()) . '-cv.' . $file->guessExtension()
                         )
                         ->maxSize(10240),
 
