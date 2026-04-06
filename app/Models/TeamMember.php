@@ -40,10 +40,24 @@ class TeamMember extends Model
             return asset('frontend/images/team/team-01.jpg');
         }
 
-        if (str_starts_with($this->image, 'frontend/')) {
+        // Legacy seeded files live directly in public/; new uploads go to storage/app/public/
+        if (file_exists(public_path($this->image))) {
             return asset($this->image);
         }
 
         return asset('storage/' . $this->image);
+    }
+
+    public function getCvFileUrlAttribute(): ?string
+    {
+        if (!$this->cv_file) {
+            return null;
+        }
+
+        if (file_exists(public_path($this->cv_file))) {
+            return asset($this->cv_file);
+        }
+
+        return asset('storage/' . $this->cv_file);
     }
 }

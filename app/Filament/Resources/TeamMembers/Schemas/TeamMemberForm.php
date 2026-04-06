@@ -52,7 +52,11 @@ class TeamMemberForm
                 ->schema([
                     FileUpload::make('image')
                         ->image()
-                        ->directory('team/photos')
+                        ->disk('public')
+                        ->directory('frontend/images/team')
+                        ->getUploadedFileNameForStorageUsing(
+                            fn ($file, $get) => $get('slug') . '.' . $file->guessExtension()
+                        )
                         ->imageEditor()
                         ->imageEditorAspectRatios(['1:1', '4:3'])
                         ->maxSize(2048),
@@ -60,7 +64,11 @@ class TeamMemberForm
                     FileUpload::make('cv_file')
                         ->label('CV File (PDF)')
                         ->acceptedFileTypes(['application/pdf'])
-                        ->directory('team/cv')
+                        ->disk('public')
+                        ->directory('downloads/cv')
+                        ->getUploadedFileNameForStorageUsing(
+                            fn ($file, $get) => $get('slug') . '-cv.' . $file->guessExtension()
+                        )
                         ->maxSize(10240),
 
                     TextInput::make('sort_order')
