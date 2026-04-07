@@ -213,7 +213,7 @@
 										@endif
 									</div>
 								</div>
-							<div class="col-md-4 right-col full-width-1200 sidebar">
+							{{-- <div class="col-md-4 right-col full-width-1200 sidebar">
 								<aside class="service-sidebar">
 									@if(isset($member->cv_file))
 									<x-frontend.cv-download
@@ -222,7 +222,7 @@
 									/>
 								@endif
 								</aside>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</div>
