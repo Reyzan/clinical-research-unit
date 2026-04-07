@@ -34,6 +34,33 @@ class TeamMember extends Model
         'publications' => 'array',
     ];
 
+    protected static function boot(): void
+    {
+        parent::boot();
+
+        static::creating(function (TeamMember $member) {
+            if (!is_null($member->sort_order)) {
+                $conflict = static::where('sort_order', $member->sort_order)->exists();
+                if ($conflict) {
+                    static::where('sort_order', '>=', $member->sort_order)->increment('sort_order');
+                }
+            }
+        });
+
+        static::updating(function (TeamMember $member) {
+            if ($member->isDirty('sort_order') && !is_null($member->sort_order)) {
+                $conflict = static::where('id', '!=', $member->id)
+                    ->where('sort_order', $member->sort_order)
+                    ->exists();
+                if ($conflict) {
+                    static::where('id', '!=', $member->id)
+                        ->where('sort_order', '>=', $member->sort_order)
+                        ->increment('sort_order');
+                }
+            }
+        });
+    }
+
     public function getImageUrlAttribute(): string
     {
         if (!$this->image) {
