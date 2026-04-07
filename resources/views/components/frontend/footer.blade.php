@@ -16,9 +16,9 @@
                     <aside class="widget">
                         <h2 class="widget-title">Research Services</h2>
                         <ul class="menu">
-                            <li><a href="{{ route('services.index') }}">Biobank</a></li>
-                            <li><a href="{{ route('services.index') }}">Genomic</a></li>
-                            <li><a href="{{ route('services.index') }}">Clinical Trial</a></li>
+                            <li><a href="{{ route('services.show', 'biobank') }}">Biobank</a></li>
+                            <li><a href="{{ route('services.show', 'genomic') }}">Genomic</a></li>
+                            <li><a href="{{ route('services.show', 'clinical-trial') }}">Clinical Trial</a></li>
                         </ul>
                     </aside>
                 </div>
