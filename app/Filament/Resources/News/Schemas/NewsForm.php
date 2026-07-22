@@ -6,8 +6,8 @@ use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Str;
@@ -24,8 +24,7 @@ class NewsForm
                             ->required()
                             ->maxLength(255)
                             ->live(onBlur: true)
-                            ->afterStateUpdated(fn (string $operation, $state, $set) =>
-                                $operation === 'create' ? $set('slug', Str::slug($state)) : null
+                            ->afterStateUpdated(fn (string $operation, $state, $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null
                             ),
 
                         TextInput::make('slug')
@@ -101,8 +100,7 @@ class NewsForm
                                     ->required()
                                     ->maxLength(255)
                                     ->live(onBlur: true)
-                                    ->afterStateUpdated(fn ($state, $set) =>
-                                        $set('slug', Str::slug($state))
+                                    ->afterStateUpdated(fn ($state, $set) => $set('slug', Str::slug($state))
                                     ),
 
                                 TextInput::make('slug')

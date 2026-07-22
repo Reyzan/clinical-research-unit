@@ -211,6 +211,11 @@
 											@endif
 										</div>
 										@endif
+
+											@include('frontend.teams.partials.meet-the-team', [
+												'unitDescription' => $member->unit_description,
+												'staff' => $member->staff,
+											])
 									</div>
 								</div>
 							{{-- <div class="col-md-4 right-col full-width-1200 sidebar">

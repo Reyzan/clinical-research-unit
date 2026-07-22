@@ -4,8 +4,9 @@ namespace App\Filament\Resources\TeamMembers\Schemas;
 
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
-use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Str;
@@ -22,8 +23,7 @@ class TeamMemberForm
                         ->required()
                         ->maxLength(255)
                         ->live(onBlur: true)
-                        ->afterStateUpdated(fn (string $operation, $state, $set) =>
-                            $operation === 'create' ? $set('slug', Str::slug($state)) : null
+                        ->afterStateUpdated(fn (string $operation, $state, $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null
                         ),
 
                     TextInput::make('slug')
@@ -42,6 +42,17 @@ class TeamMemberForm
                         ->maxLength(500)
                         ->columnSpanFull(),
 
+                    Select::make('role')
+                        ->options([
+                            'head_of_cru' => 'Head of CRU',
+                            'sub_head' => 'Sub-Head',
+                            'staff' => 'Staff',
+                        ])
+                        ->default('staff')
+                        ->required()
+                        ->helperText('"Head of CRU" appears as the hero on /teams. "Sub-Head" appears in the leadership row. "Staff" is hidden from the public teams page.')
+                        ->columnSpanFull(),
+
                     Textarea::make('bio')
                         ->rows(6)
                         ->columnSpanFull(),
@@ -55,7 +66,7 @@ class TeamMemberForm
                         ->disk('public')
                         ->directory('frontend/images/team')
                         ->getUploadedFileNameForStorageUsing(
-                            fn ($file, $get) => (Str::slug(trim($get('slug'))) ?: Str::slug(trim($get('name'))) ?: 'team-' . time()) . '.' . $file->guessExtension()
+                            fn ($file, $get) => (Str::slug(trim($get('slug'))) ?: Str::slug(trim($get('name'))) ?: 'team-'.time()).'.'.$file->guessExtension()
                         )
                         ->imageEditor()
                         ->imageEditorAspectRatios(['1:1', '4:3'])
@@ -67,7 +78,7 @@ class TeamMemberForm
                         ->disk('public')
                         ->directory('downloads/cv')
                         ->getUploadedFileNameForStorageUsing(
-                            fn ($file, $get) => (Str::slug(trim($get('slug'))) ?: Str::slug(trim($get('name'))) ?: 'team-' . time()) . '-cv.' . $file->guessExtension()
+                            fn ($file, $get) => (Str::slug(trim($get('slug'))) ?: Str::slug(trim($get('name'))) ?: 'team-'.time()).'-cv.'.$file->guessExtension()
                         )
                         ->maxSize(10240),
 
@@ -135,10 +146,19 @@ class TeamMemberForm
                         ])
                         ->columns(2)
                         ->collapsible()
-                        ->itemLabel(fn (array $state): ?string =>
-                            isset($state['title']) ? Str::limit($state['title'], 60) : null
+                        ->itemLabel(fn (array $state): ?string => isset($state['title']) ? Str::limit($state['title'], 60) : null
                         )
                         ->defaultItems(0)
+                        ->columnSpanFull(),
+                ])
+                ->collapsed(),
+
+            Section::make('Meet the Team — Unit Description')
+                ->schema([
+                    Textarea::make('unit_description')
+                        ->label('Unit Description')
+                        ->rows(4)
+                        ->helperText('Only relevant for Sub-Heads. Short description of the sub-unit this person leads. Appears above the Meet the Team roster on their profile page.')
                         ->columnSpanFull(),
                 ])
                 ->collapsed(),

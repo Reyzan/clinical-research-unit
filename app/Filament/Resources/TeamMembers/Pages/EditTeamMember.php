@@ -25,11 +25,17 @@ class EditTeamMember extends EditRecord
     {
         $record = $this->getRecord();
 
-        $textFields = ['name', 'slug', 'title', 'subtitle', 'bio', 'email', 'location', 'nationality', 'languages', 'speciality'];
+        $textFields = ['name', 'slug', 'title', 'subtitle', 'role', 'unit_description', 'bio', 'email', 'location', 'nationality', 'languages', 'speciality'];
 
         foreach ($textFields as $field) {
             if (array_key_exists($field, $data) && trim((string) ($data[$field] ?? '')) === '' && filled($record->$field)) {
                 $data[$field] = $record->$field;
+            }
+        }
+
+        foreach (['image', 'cv_file'] as $fileField) {
+            if (array_key_exists($fileField, $data) && blank($data[$fileField]) && filled($record->$fileField)) {
+                $data[$fileField] = $record->$fileField;
             }
         }
 

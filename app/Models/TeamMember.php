@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class TeamMember extends Model
@@ -14,6 +15,8 @@ class TeamMember extends Model
         'slug',
         'title',
         'subtitle',
+        'role',
+        'unit_description',
         'bio',
         'image',
         'email',
@@ -29,8 +32,8 @@ class TeamMember extends Model
     ];
 
     protected $casts = [
-        'education'    => 'array',
-        'experience'   => 'array',
+        'education' => 'array',
+        'experience' => 'array',
         'publications' => 'array',
     ];
 
@@ -39,7 +42,7 @@ class TeamMember extends Model
         parent::boot();
 
         static::creating(function (TeamMember $member) {
-            if (!is_null($member->sort_order)) {
+            if (! is_null($member->sort_order)) {
                 $conflict = static::where('sort_order', $member->sort_order)->exists();
                 if ($conflict) {
                     static::where('sort_order', '>=', $member->sort_order)->increment('sort_order');
@@ -48,7 +51,7 @@ class TeamMember extends Model
         });
 
         static::updating(function (TeamMember $member) {
-            if ($member->isDirty('sort_order') && !is_null($member->sort_order)) {
+            if ($member->isDirty('sort_order') && ! is_null($member->sort_order)) {
                 $conflict = static::where('id', '!=', $member->id)
                     ->where('sort_order', $member->sort_order)
                     ->exists();
@@ -61,9 +64,14 @@ class TeamMember extends Model
         });
     }
 
+    public function staff(): HasMany
+    {
+        return $this->hasMany(TeamMemberStaff::class)->orderBy('sort_order');
+    }
+
     public function getImageUrlAttribute(): string
     {
-        if (!$this->image) {
+        if (! $this->image) {
             return asset('frontend/images/team/team-01.jpg');
         }
 
@@ -72,12 +80,12 @@ class TeamMember extends Model
             return asset($this->image);
         }
 
-        return asset('storage/' . $this->image);
+        return asset('storage/'.$this->image);
     }
 
     public function getCvFileUrlAttribute(): ?string
     {
-        if (!$this->cv_file) {
+        if (! $this->cv_file) {
             return null;
         }
 
@@ -85,6 +93,6 @@ class TeamMember extends Model
             return asset($this->cv_file);
         }
 
-        return asset('storage/' . $this->cv_file);
+        return asset('storage/'.$this->cv_file);
     }
 }

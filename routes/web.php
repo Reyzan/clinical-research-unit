@@ -1,16 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\AboutController;
-use App\Http\Controllers\Frontend\DoctorController;
-use App\Http\Controllers\Frontend\TeamController;
-use App\Http\Controllers\Frontend\ServiceController;
 use App\Http\Controllers\Frontend\AppointmentController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\FaqController;
-use App\Http\Controllers\Frontend\PagesController;
+use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\NewsController;
+use App\Http\Controllers\Frontend\ResearcherController;
+use App\Http\Controllers\Frontend\ResearchGroupController;
+use App\Http\Controllers\Frontend\ServiceController;
+use App\Http\Controllers\Frontend\TeamController;
+use Illuminate\Support\Facades\Route;
 
 // Frontend Routes (use Bootstrap bundle)
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -18,7 +18,11 @@ Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 // Researchers (Our Teams)
 Route::get('/teams', [TeamController::class, 'index'])->name('teams.index');
+Route::get('/teams/research-groups/{group}', [ResearchGroupController::class, 'show'])->name('research-groups.show');
 Route::get('/teams/{team}', [TeamController::class, 'show'])->name('teams.show');
+
+// Researcher profile pages (linked from /teams mosaic)
+Route::get('/researchers/{researcher}', [ResearcherController::class, 'show'])->name('researchers.show');
 
 // Services
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');

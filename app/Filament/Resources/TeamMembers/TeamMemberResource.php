@@ -5,6 +5,7 @@ namespace App\Filament\Resources\TeamMembers;
 use App\Filament\Resources\TeamMembers\Pages\CreateTeamMember;
 use App\Filament\Resources\TeamMembers\Pages\EditTeamMember;
 use App\Filament\Resources\TeamMembers\Pages\ListTeamMembers;
+use App\Filament\Resources\TeamMembers\RelationManagers\StaffRelationManager;
 use App\Filament\Resources\TeamMembers\Schemas\TeamMemberForm;
 use App\Filament\Resources\TeamMembers\Tables\TeamMembersTable;
 use App\Models\TeamMember;
@@ -41,15 +42,17 @@ class TeamMemberResource extends Resource
 
     public static function getRelations(): array
     {
-        return [];
+        return [
+            StaffRelationManager::class,
+        ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index'  => ListTeamMembers::route('/'),
+            'index' => ListTeamMembers::route('/'),
             'create' => CreateTeamMember::route('/create'),
-            'edit'   => EditTeamMember::route('/{record}/edit'),
+            'edit' => EditTeamMember::route('/{record}/edit'),
         ];
     }
 
