@@ -25,31 +25,22 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the digital name card for a team member or researcher.
+     * Serve the digital name card PDF for a team member or researcher.
      *
      * The slug can belong to either person type, so both tables are
-     * checked and normalized into a single shape for the view.
+     * checked before resolving the PDF stored under the shared slug.
      */
     public function showNameCard(string $slug)
     {
-        $teamMember = TeamMember::where('slug', $slug)->first();
+        $exists = TeamMember::where('slug', $slug)->exists()
+            || Researcher::where('slug', $slug)->exists();
 
-        if ($teamMember) {
-            $person = [
-                'name' => $teamMember->name,
-                'title' => $teamMember->title,
-                'email' => $teamMember->email,
-            ];
-        } else {
-            $researcher = Researcher::where('slug', $slug)->firstOrFail();
+        abort_unless($exists, 404);
 
-            $person = [
-                'name' => $researcher->name,
-                'title' => $researcher->title,
-                'email' => $researcher->email,
-            ];
-        }
+        $path = public_path("frontend/images/name-card/{$slug}.pdf");
 
-        return view('pages.name-card.show', compact('person'));
+        abort_unless(file_exists($path), 404);
+
+        return response()->file($path, ['Content-Type' => 'application/pdf']);
     }
 }
