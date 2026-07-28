@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 // Frontend Routes (use Bootstrap bundle)
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('name-card/{slug}', [HomeController::class, 'showNameCard'])->name('name-card');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 // Researchers (Our Teams)

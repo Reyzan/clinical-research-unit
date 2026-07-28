@@ -6,7 +6,6 @@
     $bio   = $researcher->bio ?? '';
     $photo = $researcher->photo_url;
     $group = $researcher->researchGroup;
-    $accent = $group?->accent_color_or_default ?? '#C8A574';
 @endphp
 
 @section('title', $name . ' - ' . $title)
@@ -23,287 +22,180 @@
 
 @section('canonical_url', route('researchers.show', $slug))
 
-@push('styles')
-<style>
-    .rsr-hero {
-        display: grid;
-        grid-template-columns: minmax(280px, 5fr) 7fr;
-        gap: 48px;
-        align-items: center;
-        margin-bottom: 64px;
-    }
-    @media (max-width: 768px) {
-        .rsr-hero { grid-template-columns: 1fr; gap: 28px; }
-    }
-    .rsr-hero__media {
-        position: relative;
-        aspect-ratio: 4 / 5;
-        overflow: hidden;
-        background: #f0eee8;
-    }
-    .rsr-hero__media::before {
-        content: '';
-        position: absolute;
-        top: 16px; left: -8px;
-        width: 56px; height: 4px;
-        background: var(--rsr-accent, #C8A574);
-        z-index: 2;
-    }
-    .rsr-hero__media img {
-        width: 100%; height: 100%; object-fit: cover;
-    }
-    .rsr-hero__group {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 6px 14px;
-        background: rgba(0,0,0,0.04);
-        border-left: 3px solid var(--rsr-accent, #C8A574);
-        font-size: 11px;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        font-weight: 600;
-        color: #444;
-        margin-bottom: 18px;
-    }
-    .rsr-hero__group-dot {
-        width: 8px; height: 8px; border-radius: 50%;
-        background: var(--rsr-accent, #C8A574);
-    }
-    .rsr-hero__name {
-        font-size: clamp(28px, 4vw, 44px);
-        font-weight: 700;
-        line-height: 1.1;
-        margin-bottom: 8px;
-    }
-    .rsr-hero__title {
-        font-size: 17px;
-        color: #555;
-        margin-bottom: 24px;
-    }
-    .rsr-hero__contact {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        align-items: center;
-    }
-    .rsr-hero__email {
-        font-size: 14px;
-        color: #444;
-    }
-    .rsr-social {
-        display: flex;
-        gap: 10px;
-    }
-    .rsr-social a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 38px; height: 38px;
-        border: 1px solid rgba(0,0,0,0.12);
-        border-radius: 50%;
-        color: #444;
-        font-size: 14px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        text-decoration: none;
-    }
-    .rsr-social a:hover {
-        background: var(--rsr-accent, #C8A574);
-        border-color: var(--rsr-accent, #C8A574);
-        color: #fff;
-        transform: translateY(-2px);
-    }
-
-    .rsr-section { margin-bottom: 56px; }
-    .rsr-section__heading {
-        position: relative;
-        display: inline-block;
-        font-size: 22px;
-        font-weight: 700;
-        margin-bottom: 24px;
-        padding-bottom: 10px;
-    }
-    .rsr-section__heading::after {
-        content: '';
-        position: absolute;
-        left: 0; bottom: 0;
-        width: 40px; height: 3px;
-        background: var(--rsr-accent, #C8A574);
-    }
-    .rsr-prose {
-        color: #555;
-        line-height: 1.8;
-        font-size: 15px;
-    }
-    .rsr-edu-item {
-        padding: 16px 20px;
-        background: #fafaf7;
-        border-left: 3px solid var(--rsr-accent, #C8A574);
-        margin-bottom: 12px;
-    }
-    .rsr-edu-degree {
-        font-weight: 600;
-        color: #1a1a1a;
-        font-size: 15px;
-        display: block;
-        margin-bottom: 4px;
-    }
-    .rsr-edu-meta {
-        font-size: 13px; color: #666;
-    }
-
-    .rsr-pub {
-        padding: 16px 0;
-        border-bottom: 1px solid rgba(0,0,0,0.08);
-    }
-    .rsr-pub:last-child { border-bottom: 0; }
-    .rsr-pub__title {
-        font-size: 15px;
-        font-weight: 600;
-        color: #1a1a1a;
-        line-height: 1.5;
-        margin-bottom: 6px;
-    }
-    .rsr-pub__meta {
-        font-size: 13px;
-        color: #666;
-        line-height: 1.6;
-    }
-
-</style>
-@endpush
-
 @section('content')
 <x-frontend.page-title
     :title="$name"
     :breadcrumbs="[['title' => 'Our Teams', 'url' => route('teams.index')], ['title' => $name]]"
 />
 
-<div class="page-content" style="--rsr-accent: {{ $accent }};">
-    <section class="site-content">
-        <div class="container">
+<!-- Page Content -->
+		<div class="page-content">
 
-            {{-- ── HERO ── --}}
-            <div class="rsr-hero">
-                <div class="rsr-hero__media">
-                    <img src="{{ $photo }}" alt="{{ $name }}">
-                </div>
-                <div class="rsr-hero__body">
-                    @if($group)
-                        <div class="rsr-hero__group">
-                            <span class="rsr-hero__group-dot"></span>
-                            {{ $group->name }} Research Group
-                        </div>
-                    @endif
-                    <h1 class="rsr-hero__name">{{ $name }}</h1>
-                    <div class="rsr-hero__title">{{ $title }}</div>
+			<!-- Doctor Detail -->
+			<section class="site-content">
+				<div class="container">
+					<div class="pbmit-team-single">
+						<div class="pbmit-team-single-info">
+							<div class="row">
+								<div class="col-md-12 col-lg-6 pbmit-team-detail-wrapper">
+									<div class="pbmit-team-image-wrapper">
+										<div class="pbmit-featured-img-wrapper">
+											<div class="pbmit-featured-wrapper">
+												<img src="{{ $photo }}" class="img-fluid" alt="{{ $name }}">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 col-lg-6 pbmit-team-detail">
+									<div class="pbmit-team-des">
+										<div class="pbmit-team-summary">
+											<h2 class="pbmit-team-title">{{ $name }}</h2>
+											<span class="pbmit-team-designation">{{ $title }}</span>
+											@if($group)
+												<br><span class="pbmit-team-subtitle text-muted">{{ $group->name }} Research Group</span>
+											@endif
+										</div>
+										<div class="pbmit-short-description">
+											{!! nl2br(e($bio)) !!}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 full-width-1200">
+								<div class="pbmit-team-info-left">
+									@if($researcher->email || $group || $researcher->google_scholar_url || $researcher->linkedin_url || $researcher->orcid_url)
+									<div class="pbmit-info-teammember-content">
+										<h4 class="mb-3">Personal Information</h4>
+										<ul class="pbmit-team-info-content pbmit-single-team-info">
+											@if($researcher->email)
+												<li><span>Email Address :</span> <a href="mailto:{{ $researcher->email }}">{{ $researcher->email }}</a></li>
+											@endif
+											@if($group)
+												<li><span>Research Group :</span> <a href="{{ route('research-groups.show', $group->slug) }}">{{ $group->name }}</a></li>
+											@endif
+											@if($researcher->google_scholar_url)
+												<li><span>Google Scholar :</span> <a href="{{ $researcher->google_scholar_url }}" target="_blank" rel="noopener">View Profile</a></li>
+											@endif
+											@if($researcher->linkedin_url)
+												<li><span>LinkedIn :</span> <a href="{{ $researcher->linkedin_url }}" target="_blank" rel="noopener">View Profile</a></li>
+											@endif
+											@if($researcher->orcid_url)
+												<li><span>ORCID :</span> <a href="{{ $researcher->orcid_url }}" target="_blank" rel="noopener">View Profile</a></li>
+											@endif
+										</ul>
+									</div>
+									@endif
+									@if(!empty($researcher->education))
+									<div class="ihbox-style-15-area">
+										<div class="pbmit-custom-heading animation-style3">
+											<h4 class="pbmit-title">Education</h4>
+										</div>
+										<div class="row pbminfotech-gap-25px">
+											@foreach($researcher->education as $index => $edu)
+											<div class="pbmit-miconheading-style-16 col-md-12">
+												<div class="pbmit-ihbox-style-16">
+													<div class="pbmit-ihbox-box">
+														<div class="pbmit-text-content">
+															<span class="pbmit-ihbox-icon-type-text">{{ $index + 1 }}</span>
+															<div class="pbmit-text-content-wrapper">
+																<span class="pbmit-element-title">{{ $edu['degree'] ?? '' }}</span>
+																<span class="pbmit-heading-desc">
+																	<strong>{{ $edu['institution'] ?? '' }}</strong><br>
+																	<em>{{ $edu['period'] ?? '' }}</em>
+																	@if(!empty($edu['description']))
+																		<br>{{ $edu['description'] }}
+																	@endif
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											@endforeach
+										</div>
+									</div>
+									@endif
 
-                    <div class="rsr-hero__contact">
-                        @if($researcher->email)
-                            <a class="rsr-hero__email" href="mailto:{{ $researcher->email }}">{{ $researcher->email }}</a>
-                        @endif
+										@if(!empty($researcher->publications))
+										<div class="ihbox-style-15-area mt-4">
+											<div class="pbmit-custom-heading pb-xl-3 animation-style3">
+												<h4 class="pbmit-title">Publications & Books</h4>
+											</div>
+											@php
+												$currentPage = request()->get('page', 1);
+												$perPage = 10;
+												$totalPublications = count($researcher->publications);
+												$totalPages = ceil($totalPublications / $perPage);
+												$offset = ($currentPage - 1) * $perPage;
+												$paginatedPublications = array_slice($researcher->publications, $offset, $perPage);
+											@endphp
 
-                        @if($researcher->google_scholar_url || $researcher->linkedin_url || $researcher->orcid_url)
-                            <div class="rsr-social">
-                                @if($researcher->google_scholar_url)
-                                    <a href="{{ $researcher->google_scholar_url }}" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
-                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.4 3.4A8.5 8.5 0 0 1 12 8a8.5 8.5 0 0 1 7.6 4.9L24 9.5z"/></svg>
-                                    </a>
-                                @endif
-                                @if($researcher->linkedin_url)
-                                    <a href="{{ $researcher->linkedin_url }}" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
-                                        <i class="pbmit-base-icon-linkedin-logo"></i>
-                                    </a>
-                                @endif
-                                @if($researcher->orcid_url)
-                                    <a href="{{ $researcher->orcid_url }}" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID">
-                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.4 5.3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM6.4 9.8h2v9.1h-2V9.8zm4 0h4.1c3.9 0 5.6 2.8 5.6 4.6 0 2.5-1.9 4.6-5.6 4.6H10.4V9.8zm2 1.7v5.8h1.9c2.7 0 3.7-2 3.7-2.9 0-1.6-1-2.9-3.7-2.9h-1.9z"/></svg>
-                                    </a>
-                                @endif
-                            </div>
-                        @endif
-                    </div>
-                </div>
-            </div>
+											@foreach($paginatedPublications as $pub)
+											<article class="pbmit-miconheading-style-15">
+												<div class="pbmit-ihbox pbmit-ihbox-style-15">
+													<div class="pbmit-ihbox-box">
+														<h2 class="pbmit-element-title" style="font-size: 16px;">
+															{{ $pub['title'] ?? '' }}
+														</h2>
+														<div class="pbmit-heading-desc">
+															<em>{{ $pub['journal'] ?? '' }}</em>@if(!empty($pub['year'])) ({{ $pub['year'] }})@endif
+															@if(!empty($pub['doi']))
+																<br>DOI: <a href="https://doi.org/{{ $pub['doi'] }}" target="_blank" rel="noopener">{{ $pub['doi'] }}</a>
+															@endif
+															@if(!empty($pub['pmid']))
+																<br>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/{{ $pub['pmid'] }}/" target="_blank" rel="noopener">{{ $pub['pmid'] }}</a>
+															@endif
+														</div>
+													</div>
+												</div>
+											</article>
+											@endforeach
 
-            {{-- ── RESEARCH FOCUS ── --}}
-            @if($bio)
-                <div class="rsr-section">
-                    <h2 class="rsr-section__heading">Research Focus</h2>
-                    <div class="rsr-prose">{!! nl2br(e($bio)) !!}</div>
-                </div>
-            @endif
+											@if($totalPages > 1)
+											<div class="pagination-wrapper mt-4">
+												<nav aria-label="Publications pagination">
+													<ul class="pagination justify-content-center">
+														@if($currentPage > 1)
+														<li class="page-item">
+															<a class="page-link" href="{{ route('researchers.show', ['researcher' => $slug, 'page' => $currentPage - 1]) }}" aria-label="Previous">
+																<span aria-hidden="true">&laquo;</span>
+															</a>
+														</li>
+														@endif
 
-            {{-- ── EDUCATION ── --}}
-            @if(!empty($researcher->education))
-                <div class="rsr-section">
-                    <h2 class="rsr-section__heading">Education</h2>
-                    @foreach($researcher->education as $edu)
-                        <div class="rsr-edu-item">
-                            <span class="rsr-edu-degree">{{ $edu['degree'] ?? '' }}</span>
-                            <div class="rsr-edu-meta">
-                                <strong>{{ $edu['institution'] ?? '' }}</strong>
-                                @if(!empty($edu['period'])) &middot; <em>{{ $edu['period'] }}</em>@endif
-                                @if(!empty($edu['description']))<br>{{ $edu['description'] }}@endif
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            @endif
+														@for($i = 1; $i <= $totalPages; $i++)
+														<li class="page-item {{ $i == $currentPage ? 'active' : '' }}">
+															<a class="page-link" href="{{ route('researchers.show', ['researcher' => $slug, 'page' => $i]) }}">{{ $i }}</a>
+														</li>
+														@endfor
 
-            {{-- ── PUBLICATIONS & BOOKS ── --}}
-            @if(!empty($researcher->publications))
-                @php
-                    $currentPage = (int) request()->get('page', 1);
-                    $perPage = 10;
-                    $totalPublications = count($researcher->publications);
-                    $totalPages = (int) ceil($totalPublications / $perPage);
-                    $offset = ($currentPage - 1) * $perPage;
-                    $paginatedPublications = array_slice($researcher->publications, $offset, $perPage);
-                @endphp
+														@if($currentPage < $totalPages)
+														<li class="page-item">
+															<a class="page-link" href="{{ route('researchers.show', ['researcher' => $slug, 'page' => $currentPage + 1]) }}" aria-label="Next">
+																<span aria-hidden="true">&raquo;</span>
+															</a>
+														</li>
+														@endif
+													</ul>
+												</nav>
+											</div>
+											@endif
+										</div>
+										@endif
 
-                <div class="rsr-section">
-                    <h2 class="rsr-section__heading">Publications & Books</h2>
-                    @foreach($paginatedPublications as $pub)
-                        <div class="rsr-pub">
-                            <div class="rsr-pub__title">{{ $pub['title'] ?? '' }}</div>
-                            <div class="rsr-pub__meta">
-                                <em>{{ $pub['journal'] ?? '' }}</em>@if(!empty($pub['year'])) ({{ $pub['year'] }})@endif
-                                @if(!empty($pub['doi']))<br>DOI: <a href="https://doi.org/{{ $pub['doi'] }}" target="_blank" rel="noopener">{{ $pub['doi'] }}</a>@endif
-                                @if(!empty($pub['pmid']))<br>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/{{ $pub['pmid'] }}/" target="_blank" rel="noopener">{{ $pub['pmid'] }}</a>@endif
-                            </div>
-                        </div>
-                    @endforeach
-
-                    @if($totalPages > 1)
-                        <nav aria-label="Publications pagination" class="mt-4">
-                            <ul class="pagination justify-content-center">
-                                @if($currentPage > 1)
-                                    <li class="page-item"><a class="page-link" href="{{ route('researchers.show', ['researcher' => $slug, 'page' => $currentPage - 1]) }}">&laquo;</a></li>
-                                @endif
-                                @for($i = 1; $i <= $totalPages; $i++)
-                                    <li class="page-item {{ $i == $currentPage ? 'active' : '' }}">
-                                        <a class="page-link" href="{{ route('researchers.show', ['researcher' => $slug, 'page' => $i]) }}">{{ $i }}</a>
-                                    </li>
-                                @endfor
-                                @if($currentPage < $totalPages)
-                                    <li class="page-item"><a class="page-link" href="{{ route('researchers.show', ['researcher' => $slug, 'page' => $currentPage + 1]) }}">&raquo;</a></li>
-                                @endif
-                            </ul>
-                        </nav>
-                    @endif
-                </div>
-            @endif
-
-            {{-- ── MEET THE TEAM ── --}}
-            @include('frontend.teams.partials.meet-the-team', [
-                'unitDescription' => $researcher->unit_description,
-                'staff' => $researcher->teamMembers,
-                'accent' => $accent,
-            ])
-
-        </div>
-    </section>
-</div>
+											@include('frontend.teams.partials.meet-the-team', [
+												'unitDescription' => $researcher->unit_description,
+												'staff' => $researcher->teamMembers,
+											])
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</section>
+			<!-- Doctor Detail end -->
+		</div>
+		<!-- Page Content End -->
 @endsection

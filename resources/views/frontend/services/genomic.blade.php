@@ -90,12 +90,12 @@
                     </div>
                     <div class="col-md-9 service-right-col">
                         <div class="pbmit-service-feature-image">
-                            <div class="swiper-slider" data-autoplay="false" data-loop="true" data-allow-touch="true"
+                            <div class="swiper-slider" data-autoplay="false" data-loop="false" data-allow-touch="true"
                                 data-arrows="true" data-columns="1" data-margin="0" data-effect="slide" data-speed="150">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <video src="{{ asset('frontend/videos/service/genomics.mp4') }}"
-                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Genomic Services Video" loop muted autoplay playsinline></video>
+                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Genomic Services Video" loop autoplay playsinline controls></video>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="{{ asset('frontend/images/service/genomic-1.png') }}"
