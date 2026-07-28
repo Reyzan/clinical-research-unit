@@ -27,6 +27,8 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             NewsSeeder::class,
             TeamMemberSeeder::class,
+            TeamMemberStaffSeeder::class,
+            ResearchGroupSeeder::class,
         ]);
     }
 }

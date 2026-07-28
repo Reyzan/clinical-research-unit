@@ -93,24 +93,26 @@
                     </div>
                     <div class="col-md-9 service-right-col">
                         <div class="pbmit-service-feature-image">
-                            <div class="swiper-slider" data-autoplay="false" data-loop="true" data-allow-touch="true"
+                            <div class="swiper-slider" data-autoplay="false" data-loop="false" data-allow-touch="true"
                                 data-arrows="true" data-columns="1" data-margin="0" data-effect="slide" data-speed="150">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <video src="{{ asset('frontend/videos/service/clinical-trials.mp4') }}"
-                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Clinical Trial Video" loop muted autoplay playsinline></video>
+                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Clinical Trial Video" loop autoplay playsinline controls></video>
                                     </div>
                                     <div class="swiper-slide">
+                                        {{-- Aspect ratio matches the photos' native 960x645 (~3:2) so object-fit:cover
+                                             doesn't crop the edges. Update this if the replacement photos differ. --}}
                                         <img src="{{ asset('frontend/images/service/clinical-trial-1.png') }}"
-                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Clinical Trial Image 1" />
+                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 3/2;" alt="Clinical Trial Image 1" />
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="{{ asset('frontend/images/service/clinical-trial-2.png') }}"
-                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Clinical Trial Image 2" />
+                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 3/2;" alt="Clinical Trial Image 2" />
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="{{ asset('frontend/images/service/clinical-trial-3.png') }}"
-                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Clinical Trial Image 3" />
+                                            class="img-fluid w-100" style="object-fit: cover; aspect-ratio: 3/2;" alt="Clinical Trial Image 3" />
                                     </div>
                                 </div>
                             </div>

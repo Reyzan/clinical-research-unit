@@ -65,7 +65,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-8 full-width-1200">
+							<div class="col-md-12 full-width-1200">
 								<div class="pbmit-team-info-left">
 									@if($member->email || $member->location || $member->nationality || $member->languages || $member->speciality)
 									<div class="pbmit-info-teammember-content">
@@ -90,7 +90,7 @@
 									</div>
 									@endif
 									@if(isset($member->education) && count($member->education) > 0)
-									<div class="pbmit-entry-content">
+									<div class="ihbox-style-15-area">
 										<div class="pbmit-custom-heading animation-style3">
 											<h4 class="pbmit-title">Education</h4>
 										</div>
@@ -211,6 +211,11 @@
 											@endif
 										</div>
 										@endif
+
+											@include('frontend.teams.partials.meet-the-team', [
+												'unitDescription' => $member->unit_description,
+												'staff' => $member->staff,
+											])
 									</div>
 								</div>
 							{{-- <div class="col-md-4 right-col full-width-1200 sidebar">
