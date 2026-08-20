@@ -48,7 +48,6 @@ class TeamMembersRelationManager extends RelationManager
 
             Textarea::make('description')
                 ->rows(3)
-                ->maxLength(500)
                 ->columnSpanFull()
                 ->helperText('2-3 sentences describing this person\'s contribution to the unit.'),
 

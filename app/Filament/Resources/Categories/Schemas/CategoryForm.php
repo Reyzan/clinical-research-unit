@@ -27,7 +27,6 @@ class CategoryForm
                     ->rules(['alpha_dash']),
 
                 Textarea::make('description')
-                    ->maxLength(500)
                     ->rows(4)
                     ->columnSpanFull(),
             ]);

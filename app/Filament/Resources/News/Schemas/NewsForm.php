@@ -108,8 +108,7 @@ class NewsForm
                                     ->maxLength(255)
                                     ->unique(ignoreRecord: true),
 
-                                Textarea::make('description')
-                                    ->maxLength(500),
+                                Textarea::make('description'),
                             ]),
                     ]),
 

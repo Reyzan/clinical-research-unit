@@ -32,7 +32,6 @@ class ResearchGroupForm
 
                     Textarea::make('description')
                         ->rows(3)
-                        ->maxLength(500)
                         ->columnSpanFull(),
                 ])
                 ->columns(2),
